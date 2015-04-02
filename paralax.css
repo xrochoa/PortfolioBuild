@@ -1,0 +1,150 @@
+
+  /* Parallax base styles
+  --------------------------------------------- */
+
+  .parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    -webkit-perspective-origin-x: 100%;
+    perspective-origin-x: 100%;
+  }
+
+  .parallax__group {
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform-origin-x: 100%;
+    transform-origin-x: 100%;
+  }
+
+  .parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+                            background-image: url("stars2.png");
+
+  }
+
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+                      background-image: url("stars.png");
+
+
+  }
+
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+          background-image: url("maxresdefault.jpg");
+
+  }
+
+  .parallax__layer--deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+                      background-image: url("stars.png");
+
+  }
+
+
+  /* demo styles
+  --------------------------------------------- */
+
+  body, html {
+    overflow: hidden;
+      background-color: black;
+  }
+
+  body {
+    font: 100% / 1.5 Arial;
+  }
+
+  * {
+    margin:0;
+    padding:0;
+  }
+
+  .parallax {
+    font-size: 200%;
+  }
+
+   /* centre the content in the parallax layers */
+  .title {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+
+
+  /* style the groups
+  --------------------------------------------- */
+
+  #group1 {
+    z-index: 5; /* slide over group 2 */
+  }
+
+
+  #group2 {
+    z-index: 3; /* slide under groups 1 and 3 */
+  }
+
+
+  #group3 {
+    z-index: 4; /* slide over group 2 and 4 */
+  }
+
+
+  #group4 {
+    z-index: 2; /* slide under group 3 and 5 */
+  }
+
+
+  #group5 {
+    z-index: 3; /* slide over group 4 and 6 */
+  }
+
+
+  #group6 {
+    z-index: 2; /* slide under group 5 and 7 */
+  }
+
+
+  #group7 {
+    z-index: 3; /* slide over group 7 */
+  }
+
+
+
+  /* misc
+  --------------------------------------------- */
+  .demo__info {
+    position: absolute;
+    z-index:100;
+    bottom: 1vh;
+    top: auto;
+    font-size:80%;
+    text-align:center;
+    width: 100%;
+  }
