@@ -35,9 +35,6 @@
     -webkit-transform: translateZ(90px) scale(.7);
     transform: translateZ(90px) scale(.7);
     z-index: 1;
-                            background-image: url("stars2.png");
-          background-repeat: no-repeat;
-          background-size: 100% 100%;
 
 
 
@@ -47,9 +44,7 @@
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     z-index: 4;
-                      background-image: url("stars.png");
-          background-repeat: no-repeat;
-          background-size: 100% 100%;
+
 
 
 
@@ -60,9 +55,7 @@
     -webkit-transform: translateZ(-300px) scale(2);
     transform: translateZ(-300px) scale(2);
     z-index: 3;
-          background-image: url("maxresdefault.png");
-          background-repeat: no-repeat;
-          background-size: 100% 100%;
+
 
 
 
@@ -72,9 +65,7 @@
     -webkit-transform: translateZ(-600px) scale(3);
     transform: translateZ(-600px) scale(3);
     z-index: 2;
-                      background-image: url("stars.png");
-          background-repeat: no-repeat;
-          background-size: 100% 100%;
+
 
 
 

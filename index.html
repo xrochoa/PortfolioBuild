@@ -4,102 +4,195 @@
 <head>
     <title>Xavier Reyes Ochoa</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="paralax.css">
+    <link href='http://fonts.googleapis.com/css?family=Bowlby+One' rel='stylesheet' type='text/css'>
     <style>
+        #header {
+            font-family: 'Bowlby One', cursive;
+            color: blanchedalmond
+        }
         img {
             height: 50px;
         }
+        .wrapper {
+            width: 250px;
+            height: 250px;
+            text-align: center;
+        }
+        .wrapper img {
+            margin: 4% 0;
+            height: 92%;
+            width: auto;
+            -webkit-transition: margin 0.3s, height 0.3s;
+            -moz-transition: margin 0.3s, height 0.3s;
+            -o-transition: margin 0.3s, height 0.3s;
+            transition: margin 0.3s, height 0.3s;
+        }
+        .wrapper img:hover {
+            margin: 0;
+            height: 100%;
+            -webkit-transition: margin 0.3s, height 0.3s;
+            -moz-transition: margin 0.3s, height 0.3s;
+            -o-transition: margin 0.3s, height 0.3s;
+            transition: margin 0.3s, height 0.3s;
+        }
+        #group1,
+        #group3,
+        #group5,
+        #group7 {
+            background: #FF6D57;
+        }
+        .navigator {
+            background-color: blanchedalmond;
+        }
     </style>
 </head>
-    
-    <body>
 
-  
+<body>
 
-  <div class="parallax">
-    <div id="group1" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">
-          
-                      <img src="Logos/angular.png">
-            <img src="Logos/backbone.png">
-            <img src="Logos/bash.png">
-            <img src="Logos/bootstrap.png">
-            <img src="Logos/brackets.png">
-            <img src="Logos/css3.png">
-            <img src="Logos/git.png">
-            <img src="Logos/github.png">
-            <img src="Logos/googledrive.png">
-            <img src="Logos/googlemapsapi.png">
-            <img src="Logos/html5.png">
-            <img src="Logos/javascript.png">
-            <img src="Logos/jquery.png">
-            <img src="Logos/mongodb.png">
-            <img src="Logos/nodejs.png">
-            <img src="Logos/photoshop.png">
-            <img src="Logos/php.png">
-            <img src="Logos/python.png">
-            <img src="Logos/sql.png">
-          
-          </div>
-      </div>
-    </div>
-    <div id="group2" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--back">
-        <div class="title">Background Layer</div>
-      </div>
-    </div>
-    <div id="group3" class="parallax__group">
-      <div class="parallax__layer parallax__layer--fore">
-        <div class="title">Foreground Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-    </div>
-    <div id="group4" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--back">
-        <div class="title">Background Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--deep">
-        <div class="title">Deep Background Layer</div>
-      </div>
-    </div>
-    <div id="group5" class="parallax__group">
-      <div class="parallax__layer parallax__layer--fore">
-        <div class="title">Foreground Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-    </div>
-    <div id="group6" class="parallax__group">
-      <div class="parallax__layer parallax__layer--back">
-        <div class="title">Background Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-    </div>
-    <div id="group7" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-    </div>
-  </div>
+    <div class="parallax">
+        <div id="group1" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <div class="title">
 
-  
+                    <div class="container" id="header">
+                        <h1>Xavier Reyes Ochoa</h1>
+                    </div>
+                    <div class="container-fluid">
+                        <p>Web Designer bla bla bladsfakjhsdgfjkagsdfkjgaskjdfgakjsdgfkjhagsdkfjgasdkjfgakjsd asdjfgakjsdhgf kajsdgf akjhsdgf kajsgd fjkhags dfkjhga sdkjhfga skjdfg akjhsdgf kjasgd fkjahgs dkfjhags dkjfga skjd.</p>
+                    </div>
+
+                    <div class="container navigator">
+
+                        <nav>
+                            <ul class="nav nav-justified">
+
+                                <li><a href="#group2">Portfolio</a>
+                                </li>
+                                <li><a href="#group3">Skills</a>
+                                </li>
+                                <li><a href="#group4">Experience</a>
+                                </li>
+                                <li><a href="#group6">Formation</a>
+                                </li>
+                                <li><a href="#group7">Contact</a>
+                                </li>
+                            </ul>
+
+
+                        </nav>
+                    </div>
+
+
+
+                    <div class="wrapper">
+                        <a href="#group2">
+                            <img src="Logos/angular.png">
+                        </a>
+                    </div>
+                    <img src="Logos/backbone.png">
+                    <img src="Logos/bash.png">
+                    <img src="Logos/bootstrap.png">
+                    <img src="Logos/brackets.png">
+                    <img src="Logos/css3.png">
+                    <img src="Logos/git.png">
+                    <img src="Logos/github.png">
+                    <img src="Logos/googledrive.png">
+                    <img src="Logos/googlemapsapi.png">
+                    <img src="Logos/html5.png">
+                    <img src="Logos/javascript.png">
+                    <img src="Logos/jquery.png">
+                    <img src="Logos/mongodb.png">
+                    <img src="Logos/nodejs.png">
+                    <img src="Logos/photoshop.png">
+                    <img src="Logos/php.png">
+                    <img src="Logos/python.png">
+                    <img src="Logos/sql.png">
+
+                </div>
+            </div>
+        </div>
+        <div id="group2" class="parallax__group">
+
+            <div class="parallax__layer parallax__layer--back">
+                <div class="title">
+                    <h1>PORTFOLIO</h1>
+                    <img src="Logos/backbone.png">
+                    <img src="Logos/bash.png">
+                    <img src="Logos/bootstrap.png">
+                    <img src="Logos/brackets.png">
+                    <img src="Logos/css3.png">
+                    <img src="Logos/git.png">
+                    <img src="Logos/github.png">
+                    <img src="Logos/googledrive.png">
+                    <img src="Logos/googlemapsapi.png">
+                    <img src="Logos/html5.png">
+                    <img src="Logos/javascript.png">
+                    <img src="Logos/jquery.png">
+                    <img src="Logos/mongodb.png">
+                    <img src="Logos/nodejs.png">
+                    <img src="Logos/photoshop.png">
+                    <img src="Logos/php.png">
+                    <img src="Logos/python.png">
+                    <img src="Logos/sql.png">
+                </div>
+            </div>
+        </div>
+        <div id="group3" class="parallax__group">
+
+            <div class="parallax__layer parallax__layer--base">
+                <div class="title">
+                    <h1>SKILLS</h1>
+
+                    <img src="Logos/bootstrap.png">
+                </div>
+            </div>
+        </div>
+        <div id="group4" class="parallax__group">
+
+            <div class="parallax__layer parallax__layer--back">
+                <div class="title">
+                    <h1>EXPERIENCE</h1>
+                </div>
+            </div>
+        </div>
+        <div id="group5" class="parallax__group">
+
+            <div class="parallax__layer parallax__layer--base">
+                <div class="title">
+                    <h1>PORTFOLIO</h1>
+
+                    <img src="Logos/googledrive.png">
+                </div>
+            </div>
+        </div>
+        <div id="group6" class="parallax__group">
+            <div class="parallax__layer parallax__layer--back">
+                <div class="title">
+
+                    <h1>FORMATION</h1> 
+                </div>
+            </div>
+
+        </div>
+        <div id="group7" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <div class="title">
+                    <h1>CONTACT</h1>
+
+                    <img src="Logos/python.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
 </body>
-    
-    
+
+
 
 
 </html>
