@@ -1,0 +1,30 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "A clean and simple template",
+  "main": "server.js",
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "bootstrap",
+    "node",
+    "mongodb"
+  ],
+  "authors": [
+    "Xavier Reyes Ochoa"
+  ],
+  "license": "MIT",
+  "homepage": "www.xaviro.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.7",
+    "jquery": "~2.1.4"
+  }
+}

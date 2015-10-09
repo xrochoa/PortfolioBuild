@@ -1,0 +1,191 @@
+
+  /* Parallax base styles
+  --------------------------------------------- */
+
+  .parallax {
+    font-size: 200%;
+
+    
+    height: 1000px; /* fallback for older browsers 
+    height: 100vh;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    -webkit-perspective-origin-x: 100%;
+    perspective-origin-x: 100%;
+  }
+
+  .parallax__group {
+    position: relative;
+    height: 600px; /* fallback for older browsers 
+    height: 100vh;*/
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform-origin-x: 100%;
+    transform-origin-x: 100%;
+  }
+
+
+
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+
+
+
+
+
+  }
+
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+
+
+
+
+  }
+
+
+
+
+  /* style the groups
+  --------------------------------------------- */
+
+  #group1 {
+    z-index: 5; /* slide over group 2 */
+  }
+
+
+  #group2 {
+    z-index: 3; /* slide under groups 1 and 3 */
+  }
+
+
+  #group3 {
+    z-index: 5; /* slide over group 2 and 4 */
+  }
+
+
+  #group4 {
+    z-index: 3; /* slide under group 3 and 5 */
+  }
+
+
+  #group5 {
+    z-index: 5; /* slide over group 4 and 6 */
+  }
+
+
+  #group6 {
+    z-index: 3; /* slide under group 5 and 7 */
+  }
+
+
+  #group7 {
+    z-index: 5; /* slide over group 7 */
+  }
+
+
+  /* custom styles
+  --------------------------------------------- */
+
+  @font-face {
+    font-family: Manteka;
+    src: url(Mohave.otf);
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: Manteka;
+  }
+  body,
+  html {
+    overflow: hidden;
+    color: #4A4A4A;
+    background: linear-gradient(#fff, white);
+  }
+  .first {
+    height: 400px;
+  }
+  .title {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #header {
+    color: white;
+    height: 50px;
+    margin-bottom: 80px;
+  }
+  #paragraph {
+    height: 100px;
+    margin: 50px;
+  }
+  #logo {
+    height: 160px;
+    margin: -50px
+  }
+  .navigator {
+    background-color: #f67059;
+    height: 25px;
+    box-shadow: 0px 0px 5px 0px #000;
+    font-size: 20px;
+    padding: 15px;
+  }
+  a {
+    color: #f67059;
+    height: 110px;
+    width: 60px;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #4A4A4A
+  }
+  img {
+    height: 80px;
+    text-align: center;
+  }
+        /*-webkit-transition: margin 0.3s, height 0.3s;
+            -moz-transition: margin 0.3s, height 0.3s;
+            -o-transition: margin 0.3s, height 0.3s;
+            transition: margin 0.3s, height 0.3s;
+        }
+        img:hover {
+            height: 110px;
+            -webkit-transition: margin 0.3s, height 0.3s;
+            -moz-transition: margin 0.3s, height 0.3s;
+            -o-transition: margin 0.3s, height 0.3s;
+            transition: margin 0.3s, height 0.3s;
+            }*/
+            #group1,
+            #group3,
+            #group5,
+            #group7 {
+              background: linear-gradient(#59BFF6, #59A2F6);
+              /* Standard syntax */
+              background-image: url(toalla.png) repeat;
+              box-shadow: 0px 0px 5px 0px #000;
+            }
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              display: inline;
+            }
+            li {
+              display: table-cell;
+              width: 500px;
+              color: white;
+            }
+
