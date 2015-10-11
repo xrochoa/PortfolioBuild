@@ -15,9 +15,11 @@
   "author": "Xavier Reyes Ochoa",
   "license": "MIT",
   "devDependencies": {
+    "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-cdnizer": "^1.1.6",
     "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.3.0",
     "gulp-jshint": "^1.11.2",
     "gulp-jsonminify": "^1.0.0",
     "gulp-livereload": "^3.8.1",

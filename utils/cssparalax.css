@@ -1,0 +1,73 @@
+// Paralax
+.parallax {
+    height: 100vh;
+    overflow-y: auto;
+    perspective: 300px;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+}
+
+.top {
+    @extend .layer;
+}
+
+.back {
+    @extend .layer;
+    transform: translateZ(-300px) scale(2);
+    padding-top: 25vh;
+
+}
+
+.group {
+    position: relative;
+    height: 50vh;
+    transform-style: preserve-3d;
+}
+
+.group-front {
+    @extend .group;
+    z-index: 5;
+    background: linear-gradient(#59BFF6, #59A2F6);
+    box-shadow: 0px 0px 5px 0px #000;
+}
+
+.group-back {
+    @extend .group;
+    z-index: -5;
+}
+
+//Custom
+@font-face {
+    font-family: Manteka;
+    src: url(Mohave.otf);
+}
+
+body,
+html {
+    overflow: hidden;
+    background: linear-gradient(white, #dddddd);
+    color: #4A4A4A;
+}
+header {
+    padding-top: 10%;
+    width: 100%;
+}
+
+.first {
+    height: 50vh;
+}
+
+.logo, img {
+    height: 50px;
+}
+
+.moon, .title {
+  width: 100%;
+background-color: red;
+}
+.footer {
+    padding: 3%;
+}

@@ -13,60 +13,62 @@ var minifyHTML = require('gulp-minify-html');
 var minifyCss = require('gulp-minify-css');
 // Server automation plugins
 var nodemon = require('gulp-nodemon');
-var notify = require('gulp-notify');
 var livereload = require('gulp-livereload');
+// Optimize images
+var imagemin = require('gulp-imagemin');
+// Clean folders before tasks
+var del = require('del');
 
-
-
-
-// Lint Task
-gulp.task('lint', function () {
-    return gulp.src('js/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
-    .pipe(notify("Js hint ran!"));
-
+// Clean folders before tasks
+gulp.task('clean', function () {
+    del(['temp/*','dist/*'])
 });
 
 // Compile Our Sass
 gulp.task('sass', function () {
     return gulp.src('scss/*.scss')
     .pipe(sass())
-    .pipe(concat('style.min.css'))
+    .pipe(concat('style.css'))
+    .pipe(gulp.dest('temp'))
+    .pipe(rename('style.min.css'))
     .pipe(minifyCss())
     .pipe(gulp.dest('dist/css'))
     .pipe(livereload())
-    .pipe(notify("Compiled, concatenated and minified scss files!"));
-
 });
 
-// Concatenate & Minify JS
+
+// Lint, Concatenate & Minify JS
 gulp.task('scripts', function () {
     return gulp.src('js/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'))
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest('temp'))
     .pipe(uglify())
     .pipe(rename(function (path) {
         path.basename += ".min";
     }))
     .pipe(gulp.dest('dist/js'))
     .pipe(livereload())
-    .pipe(notify("Concatenated and minified js files!"));
 });
 
 // Minify JSONS
 gulp.task('jsons', function () {
-    return gulp.src('refs/*.json')
+    return gulp.src('data/**/*.json')
     .pipe(jsonminify())
-    .pipe(gulp.dest('dist/refs'))
+    .pipe(gulp.dest('dist/res'))
     .pipe(livereload())
-    .pipe(notify("Minified Jsons!"));
 });
 
 // Copy images
 gulp.task('images', function () {
-    return gulp.src('img/*.png')
+    return gulp.src('img/**/*')
+    .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}]
+        }))
     .pipe(gulp.dest('dist/img'))
     .pipe(livereload())
-    .pipe(notify("Images copied!"));
 });
 
 //Replacing local links with CDNs and minify index.html
@@ -79,22 +81,6 @@ gulp.task('cdn', function () {
         cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular.min.js'
     },
     {
-        file: 'bower_components/angular-animate/angular-animate.js',
-        package: 'angular-animate',
-        cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular-animate.min.js'
-    },
-    {
-        file: 'bower_components/angular-route/angular-route.js',
-        package: 'angular-route',
-        cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular-route.min.js'
-    },
-    {
-        file: 'bower_components/angular-sanitize/angular-sanitize.js',
-        package: 'angular-sanitize',
-        cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular-sanitize.min.js'
-    },
-    /* REGULAR BOOTSTRAP
-    {
         file: 'bower_components/bootstrap/dist/css/bootstrap.css',
         package: 'bootstrap',
         cdn: 'https://maxcdn.bootstrapcdn.com/bootstrap/${ version }/css/bootstrap.min.css'
@@ -103,15 +89,6 @@ gulp.task('cdn', function () {
         file: 'bower_components/bootstrap/dist/js/bootstrap.js',
         package: 'bootstrap',
         cdn: 'https://maxcdn.bootstrapcdn.com/bootstrap/${ version }/js/bootstrap.min.js'
-    },*/
-    //NEW BOOSTRAP 4 ALPHA
-    {
-        file: 'bower_components/bootstrap/dist/css/bootstrap.css',
-        cdn: 'https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.min.css'
-    },
-    {
-        file: 'bower_components/bootstrap/dist/js/bootstrap.js',
-        cdn: 'https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.min.js'
     },
     {
         file: 'bower_components/jquery/dist/jquery.js',
@@ -119,33 +96,25 @@ gulp.task('cdn', function () {
         cdn: 'https://ajax.googleapis.com/ajax/libs/jquery/${ version }/jquery.min.js'
     },
     {
-        file: 'css/style.css',
+        file: 'temp/style.css',
         cdn: 'css/style.min.css'
     },
     {
-        file: 'js/app.js',
+        file: 'temp/app.js',
         cdn: 'js/app.min.js'
-    },
-    {
-        file: 'js/navbar.js',
-        cdn: 'js/navbar.min.js'
     }
     ]))
 .pipe(minifyHTML())
 .pipe(gulp.dest("dist"))
 .pipe(livereload())
-.pipe(notify("Updated cdns and minified HTML!"));
-
-
 });
 
 //Minify  content HTML
 gulp.task('minify-html', function () {
-    return gulp.src('content/**/*.html')
+    return gulp.src('views/**/*.html')
     .pipe(minifyHTML())
-    .pipe(gulp.dest('dist/content'))
+    .pipe(gulp.dest('dist/views'))
     .pipe(livereload())
-    .pipe(notify("Minified HTML content!"));
 });
 
 // Node server start
@@ -158,14 +127,14 @@ gulp.task('server', function () {
 // Watch Files For Changes
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch('js/*.js', ['lint', 'scripts']);
-    gulp.watch('refs/*.json', ['jsons']);
+    gulp.watch('js/*.js', ['scripts']);
+    gulp.watch('data/**/*.json', ['jsons']);
     gulp.watch('scss/*.scss', ['sass']);
     gulp.watch('index.html', ['cdn']);
-    gulp.watch('content/*.html', ['minify-html']);
+    gulp.watch('views/*.html', ['minify-html']);
 
 });
 
 // Default Task
-gulp.task('default', ['lint', 'sass', 'scripts', 'jsons', 'cdn', 'minify-html', 'images',
+gulp.task('default', ['clean','sass', 'scripts', 'jsons', 'cdn', 'minify-html', 'images',
     'watch','server']);

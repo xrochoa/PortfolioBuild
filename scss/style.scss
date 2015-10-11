@@ -1,0 +1,62 @@
+@import 'palette';
+@import 'navbar';
+@import 'squares';
+
+
+$firstColor: $xr-cyan2;
+$secondColor: $xr-red2;
+$gradientDark: linear-gradient($xr-gray0, $xr-gray1);
+html,
+body {
+    background-color: $firstColor;
+}
+
+section {
+    //background: $gradientDark;
+    //height: 400px;
+}
+
+.logo {
+  height: 20vw;
+  margin-top: 25vw;
+  margin-bottom: 10vw;
+
+}
+
+header .container {
+    background: linear-gradient($xr-gray2, $xr-gray3);
+    color: $firstColor;
+    padding-bottom: 100px;
+    width: 100%;
+}
+
+
+.name {
+    font-size: 8vw;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.lead {
+    font-size: 3.5vw;
+
+}
+
+hr {
+    max-width: 100%;
+    border: 0;
+    height: 10px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $firstColor, rgba(0, 0, 0, 0));
+}
+
+.skills {
+  width: 50%;
+}
+
+.skills-parent {
+  background-color: $gradientDark;
+}
+
+footer {
+    padding: 3%;
+}

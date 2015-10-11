@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appFolio" ng-controller="mainCtrl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Template</title>
+    
+    <!-- Removes # in Angular routes -->
+    <base href="/">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    
+    <!-- Compiled and concatenated custom scss -->
+    <link rel="stylesheet" href="temp/style.css">
+    
+    <!-- Angular JS and Modules -->
+    <script src="bower_components/angular/angular.js"></script>
+    
+  </head>
+  
+  <body class="text-center">
+    <!-- NavBar -->
+    
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsible">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#page-top">xaviro.com</a>
+        </div>
+        
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="collapsible">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="hidden active">
+              <a href="#page-top"></a>
+            </li>
+            <li class="page-scroll">
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#about">About</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    
+    
+    
+    <!-- Header                     <img class="img-responsive" src="img/profile.png" alt="">
+    -->
+    
+    <header>
+      <div class="container">
+        <div class="row">
+          <img class="img-rounded logo"src="img/x.png">
+          <div class="col-xs-12">
+            <span class="name">
+              <span>xavi</span><span class="xaviro transparent">e</span><span class="xaviro transparent">r</span><span class="xaviro transparent"> </span>
+              <span>r</span><span class="xaviro transparent">e</span><span class="xaviro transparent">y</span><span class="xaviro transparent">e</span><span class="xaviro transparent">s</span><span class="xaviro transparent"> </span>
+              <span>o</span><span class="xaviro transparent">c</span><span class="xaviro transparent">h</span><span class="xaviro transparent">o</span><span class="xaviro transparent">a</span>
+              
+            </span>
+            <hr>
+            <span class="lead">Full-Stack JavaScript Developer</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    
+    
+    <!-- Sections -->
+    <section >
+            <div>
+
+      <div class="square img_1-1">
+      </div>
+      <div class="square img_1-2">
+      </div>
+      <div class="square img_1-3">
+      </div>
+      <div class="square img_2-1">
+      </div>
+      <div class="square img_2-2">
+      </div>
+      <div class="square img_2-3">
+      </div>
+            </div>
+
+    </section>
+    
+    
+    
+    <section>
+      <div class="row">
+        <div class="col-xs-3 skills-parent" ng-repeat="skill in skills">
+          <a href="http://localhost:3000/">
+            <p>{{skill | uppercase}}</p>
+            <img class="skills" ng-src="img/logos/{{skill}}.png">
+          </a>
+          
+        </div>
+      </div>
+    </section>
+  <section></section>
+  
+<section></section>
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="footer blood">
+  
+  <small>Designed and coded by <a href='mailto:x.a.reyes-ochoa@hotmail.com'>Xavi Ro</a>. 2015</small>
+  
+</footer>
+
+<!-- jQuery first, then Bootstrap JS. -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+<!-- Concatenated custom scripts -->
+<script src="temp/app.js"></script>
+
+</body>
+</html>

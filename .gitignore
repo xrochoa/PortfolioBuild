@@ -4,3 +4,7 @@
 # Bower and npm packages
 bower_components
 node_modules
+
+# Dist and temp folder
+dist
+temp
