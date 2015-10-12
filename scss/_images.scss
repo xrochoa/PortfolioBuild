@@ -1,0 +1,20 @@
+#navbar img {
+    height: 100%;
+}
+
+#portfolio img {
+    width: 100%;
+}
+
+#skillset img,
+#experience img {
+    height: 100px;
+}
+/* do this in the best way using mixins and making sure portfolio zoom work well
+img {
+    transition: all 0.5s ease;
+}
+
+img:hover {
+    opacity: 0.75;
+}*/

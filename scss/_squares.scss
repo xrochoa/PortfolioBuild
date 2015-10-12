@@ -1,17 +1,70 @@
-.square {
-    float:left;
-    position: relative;
-    width: 30%;
-    padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
-    margin:1.66%;
-    background-position:center center;
-    background-repeat:no-repeat;
-    background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+section {
+	@extend .reset;
+}
+.squareParent{
+	padding:10vw;
+}
+.newlink {
+
 }
 
-.img_1-1{background-image:url('https://farm4.staticflickr.com/3766/12953056854_b8cdf14f21.jpg');}
-.img_1-2{background-image:url('https://farm7.staticflickr.com/6092/6227418584_d5883b0948.jpg');}
-.img_1-3{background-image:url('https://farm8.staticflickr.com/7187/6895047173_d4b1a0d798.jpg');}
-.img_2-1{background-image:url('https://farm8.staticflickr.com/7163/6822904141_50277565c3.jpg');}
-.img_2-2{background-image:url('https://farm7.staticflickr.com/6139/5986939269_10721b8017.jpg');}
-.img_2-3{background-image:url('https://farm4.staticflickr.com/3165/5733278274_2626612c70.jpg');}
+.project {
+    //@extend .reset;
+    margin: 0vw;
+    padding: 0;
+    //width: 100vw;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.square {
+    //@extend .reset;
+    height: 33.3vw;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.square:hover {
+    background-color: rgba($xr-orange1, 0.9);
+    ;
+    opacity: 1;
+}
+
+.project-1 {
+    @extend .project;
+    background-image: url('/img/p1.jpg');
+}
+
+.project-2 {
+    @extend .project;
+    background-image: url('/img/p2.jpg');
+}
+
+.project-3 {
+    @extend .project;
+    background-image: url('/img/p1.jpg');
+}
+
+.project-4 {
+    @extend .project;
+    background-image: url('/img/p2.jpg');
+}
+
+.project-5 {
+    @extend .project;
+    background-image: url('/img/p1.jpg');
+}
+
+.project-6 {
+    @extend .project;
+    background-image: url('/img/p2.jpg');
+}
+
+.glyphicon {
+    color: $xr-gray0;
+    position: relative;
+    padding-top: 50%;
+    transform: translateY(-5vw);
+    font-size: 10vw;
+}

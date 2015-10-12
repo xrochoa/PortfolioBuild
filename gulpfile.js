@@ -26,9 +26,8 @@ gulp.task('clean', function () {
 
 // Compile Our Sass
 gulp.task('sass', function () {
-    return gulp.src('scss/*.scss')
+    return gulp.src('scss/style.scss')
     .pipe(sass())
-    .pipe(concat('style.css'))
     .pipe(gulp.dest('temp'))
     .pipe(rename('style.min.css'))
     .pipe(minifyCss())

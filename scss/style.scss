@@ -1,24 +1,33 @@
-@import 'palette';
-@import 'navbar';
-@import 'squares';
+//@import 'reset';
+//@import 'palette';
+//@import 'navbar';
+//@import 'squares';
+@import 'nameAnimation';
+@import 'images'
 
 
+
+/*
 $firstColor: $xr-cyan2;
-$secondColor: $xr-red2;
+$secondColor: $xr-orange1;
 $gradientDark: linear-gradient($xr-gray0, $xr-gray1);
-html,
-body {
-    background-color: $firstColor;
+html, body, header, section, nav {
+    background-color: $secondColor;
+    //@extend .reset;
+          @extend .fullW;
+
 }
 
-section {
-    //background: $gradientDark;
-    //height: 400px;
+nav, .row, .container, .col-xs-12 {
+      @extend .fullW;
+
 }
+
+
 
 .logo {
-  height: 20vw;
-  margin-top: 25vw;
+  height: 30vw;
+  margin-top: 10rem;
   margin-bottom: 10vw;
 
 }
@@ -39,24 +48,24 @@ header .container {
 
 .lead {
     font-size: 3.5vw;
-
 }
 
 hr {
     max-width: 100%;
     border: 0;
-    height: 10px;
+    height: 1vh;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $firstColor, rgba(0, 0, 0, 0));
 }
 
 .skills {
+  //image size
   width: 50%;
 }
 
 .skills-parent {
-  background-color: $gradientDark;
+  background-color: $xr-red0;
 }
 
 footer {
-    padding: 3%;
-}
+    padding: 3%; 
+}*/
