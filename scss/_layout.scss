@@ -1,0 +1,39 @@
+@import 'palette';
+$amount: 3%;
+html,
+body {
+    background: linear-gradient($mainClear, darken($mainClear, $amount));
+}
+
+#header,
+#footer {
+    background: linear-gradient($mainDark, darken($mainDark, $amount));
+}
+
+.even,
+#navbar {
+    background: linear-gradient($mainLight, darken($mainLight, $amount));
+}
+
+#header {
+    padding: 10rem 0 5rem;
+}
+
+#footer {
+    padding: 3rem 0;
+}
+
+.section {
+    padding-bottom: 3rem;
+}
+
+.image-container {
+    padding: 1rem;
+}
+
+.link-block {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}

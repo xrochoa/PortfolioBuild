@@ -1,14 +1,40 @@
+@import 'palette';
 //letter title
 .transparent {
     color: transparent;
     font-size: 0rem;
 }
 
-.xaviro, .com {
+.xaviro,
+.com {
     transition: font-size 0.5s ease, color 1.5s;
 }
 
 //bar name
 #scrollFade {
-	display: none ;
+    display: none;
+}
+
+#header-logo,
+.lead {
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.navbar-fixed-top {
+    padding: 0.5em 0;
+    transition: padding .3s;
+}
+
+.full-color {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: $mainLight;
+    transition: all ease .5s;
+}
+
+.full-color:hover {
+    opacity: 0.75;
 }

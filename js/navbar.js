@@ -7,6 +7,14 @@ $(function() {
     //name FX
     setTimeout(function() {
 
+        $("#header-logo").css({
+            'opacity': '1'
+        });
+        $(".lead").css({
+            'opacity': '1'
+        });
+
+
         $('.xaviro').each(function(i) {
             var letter = $(this);
 
@@ -40,8 +48,8 @@ $(function() {
     var navParent = $('#navParent');
     var section = $('#portfolio');
 
-    var navParentPosition, windowPosition, 
-    counter = "on";
+    var navParentPosition, windowPosition,
+        counter = "on";
 
     function changingValues() {
         navParentPosition = navParent.offset().top;

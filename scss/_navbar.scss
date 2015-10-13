@@ -1,45 +1,43 @@
 @import 'palette';
-.row {
-width: 100vw;
-}
-@media(min-width:768px) {
-    .navbar-fixed-top {
-        padding: 25px 0;
-        transition: padding .3s;
+.navbar-custom {
+    box-shadow: 0px 0px 10px 1px $xr-gray2;
+    .navbar-brand {
+        color: $mainDark;
+        &:hover,
+        &:focus {
+            color: $mainClear;
+        }
     }
-    .navbar-fixed-top .navbar-brand {
-        font-size: 2em;
-        transition: all .3s;
+    .navbar-nav {
+        > li > a {
+            color: $mainClear;
+            &:hover,
+            &:focus {
+                color: $mainDark;
+                background-color: $mainClear;
+            }
+        }
+        > .active > a {
+            &,
+            &:hover,
+            &:focus {
+                background-color: darken($mainLight, 5%);
+            }
+        }
     }
-    .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
+    .navbar-toggle {
+        border-radius: 2rem;
+        border-color: transparent;
+        &:hover {
+            background-color: $mainDark;
+
+        }
+        .icon-bar {
+            background-color: $mainClear;
+        }
     }
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
+    .navbar-collapse,
+    .navbar-form {
+        border-color: $mainLight;
     }
-}
-
-.navbar {
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    background: linear-gradient($xr-gray0, $xr-gray1);
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
-}
-
-.navbar a:focus {
-    outline: 0;
-}
-
-.navbar .navbar-nav {
-    letter-spacing: 1px;
-}
-
-.navbar .navbar-nav li a:focus {
-    outline: 0;
-}
-
-.navbar-default,
-.navbar-inverse {
-    border: 0;
 }

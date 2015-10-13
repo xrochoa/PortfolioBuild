@@ -28,13 +28,15 @@
       
       <div class="container-fluid">
         <div class="row">
-          <img class="img-rounded"src="img/x.png">
+          <img class="img-circle" id="header-logo" src="img/x.png">
           <div class="col-xs-12">
-              <h1 class="name">
-              <span class="com">w</span><span class="com">w</span><span class="com">w</span><span class="com">.</span><span>XAVI</span><span class="xaviro transparent">E</span><span class="xaviro transparent">R</span><span class="xaviro transparent"> </span>
-              <span>R</span><span class="xaviro transparent">E</span><span class="xaviro transparent">Y</span><span class="xaviro transparent">E</span><span class="xaviro transparent">S</span><span class="xaviro transparent"> </span>
-              <span>O</span><span class="xaviro transparent">C</span><span class="xaviro transparent">H</span><span class="xaviro transparent">O</span><span class="xaviro transparent">A</span><span class="com">.</span><span class="com">c</span><span class="com">o</span><span class="com">m</span>
-              </h1>
+            <h1 class="name">
+            <span class="com">w</span><span class="com">w</span><span class="com">w</span><span class="com">.</span>
+            <span>XAVI</span><span class="xaviro transparent">E</span><span class="xaviro transparent">R</span><span class="xaviro transparent"> </span>
+            <span>R</span><span class="xaviro transparent">E</span><span class="xaviro transparent">Y</span><span class="xaviro transparent">E</span><span class="xaviro transparent">S</span><span class="xaviro transparent"> </span>
+            <span>O</span><span class="xaviro transparent">C</span><span class="xaviro transparent">H</span><span class="xaviro transparent">O</span><span class="xaviro transparent">A</span>
+            <span class="com">.</span><span class="com">c</span><span class="com">o</span><span class="com">m</span>
+            </h1>
             
             <hr>
             
@@ -47,222 +49,201 @@
       
       <!-- Navbar-->
       <div id="navParent">
-      <nav class="navbar navbar-default" id="navbar">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            
-            <!-- Collapsible button -->
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsible" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            
-            <!-- Navbar Brand -->
-            <a class="navbar-brand" href="#">
-              <span><img class="img-rounded" alt="xaviro.com" src="img/x.png">
-              <span id="scrollFade">Xavier Reyes Ochoa</span></span>
-            </a>
-            
-          </div>
-          
-          <!-- Collapsible -->
-          <div class="collapse navbar-collapse" id="collapsible">
-            <ul class="nav navbar-nav">
+        <nav class="navbar navbar-custom" id="navbar">
+          <div class="container-fluid">
+            <div class="navbar-header">
               
-              <li class="active"><a href="#portfolio">Portfolio<span class="sr-only">(current)</span></a></li>
-              <li><a href="#skillset">Skill Set</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <!-- Collapsible button -->
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsible" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              </button>
               
-            </ul>
-          </div>
-          
+              <!-- Navbar Brand -->
+              <a class="navbar-brand" href="#">
+                <span><img class="img-circle" alt="xaviro.com" src="img/xs.png">
+                  <span id="scrollFade"> Xavier Reyes Ochoa <span class="half-size">Developer</span></span></span>
+                </a>
+                
+              </div>
+              
+              <!-- Collapsible -->
+              <div class="collapse navbar-collapse" id="collapsible">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  <li class="active"><a href="#portfolio">Portfolio<span class="sr-only">(current)</span></a></li>
+                  <li><a href="#skillset">Skill Set</a></li>
+                  <li><a href="#experience">Experience</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                  
+                </ul>
+              </div>
+              
+            </div>
+          </nav>
         </div>
-      </nav>
-      </div>
-      
-      
-      
-      <!-- Project section -->
-      <section id="portfolio">
-        
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-xs-12">
-              <h2>Portfolio</h2>
-              <hr>
-            </div>
-          </div>
-          
-          <article>
-            
-            <div class="container-fluid">
-              <div class="row">
-                
-                <div class="col-xs-4" ng-repeat="item in [1,2,3]">
-                  <a href="/img/{{item}}.jpg">
-                    <div>
-                      
-                      <!-- Projects Images -->
-                      <img class= "img-rounded" ng-src="img/p4.png">
-                      <span class="glyphicon glyphicon-zoom-in"></span>
-                      
-                    </div>
-                  </a>
-                </div>
-                
-              </div>
-            </div>
-            
-          </article>
-          
-          <article>
-            
-            <div class="container-fluid">
-              <div class="row">
-                
-                <div class="col-xs-4" ng-repeat="item in [1,2,3]">
-                  <a href="/img/{{item}}.jpg">
-                    <div>
-                      
-                      <!-- Projects Images -->
-                      <img class= "img-rounded" ng-src="/img/p4.png">
-                      <span class="glyphicon glyphicon-zoom-in"></span>
-                      
-                    </div>
-                  </a>
-                </div>
-                
-              </div>
-            </div>
-            
-          </article>
-          
-        </section>
         
         
-        <!-- Skillset section -->
-        <section id="skillset">
+        
+        <!-- Project section -->
+        <section id="portfolio" class="odd section">
           
           <div class="container-fluid">
             <div class="row">
               <div class="col-xs-12">
-                <h2>Skillset</h2>
+                <h2>Portfolio</h2>
                 <hr>
               </div>
             </div>
             
-            <div class="row">
-              <div class="col-xs-3" ng-repeat="skill in skills">
-                
-                <a href="http://localhost:3000/">
-                  <img class="img-rounded" ng-src="img/{{skill}}.png">
-                </a>
-                
+            <article>
+              
+              <div class="container-fluid">
+                <div class="row">
+                  
+                  <div class="col-sm-4 col-xs-12 image-container" ng-repeat="item in [1,2,3,4,5,6]">
+                    
+                    <a href="#" class="link-block">
+                      <div class="full-color">
+                        <div class="zoom-icon">
+                          <span class="glyphicon glyphicon-zoom-in"></span>
+                        </div>
+                      </div>
+                      <img src="img/p4.png" class="img-responsive" alt="">
+                    </a>
+                    
+                  </div>
+                  
+                </div>
               </div>
-            </div>
+              
+            </article>
             
           </section>
           
-        <!-- Experience section -->
-        <section id="experience">
           
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-xs-12">
-                <h2>Experience</h2>
-                <hr>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-xs-3" ng-repeat="job in jobs">
-                
-                <!-- Experience section -->
-                <a href="{{job.link}}">
-                  <img class="img-rounded" ng-src="img/{{job.logo}}.png">
-                </a>
-                <h4>{{job.name}}</h4>
-                <p>{{job.desc}}</p>
-                
-              </div>
-            </div>
-            
-          </section>
-
-          <!-- Contact -->
-          <section id="contact">
+          <!-- Skillset section -->
+          <section id="skillset" class="even section">
             
             <div class="container-fluid">
               <div class="row">
                 <div class="col-xs-12">
-                  <h2>Contact Me</h2>
+                  <h2>Skillset</h2>
                   <hr>
                 </div>
               </div>
               
               <div class="row">
-                <div class="col-xs-8 col-xs-offset-2">
+                <div class="col-sm-3 col-xs-4 image-container" ng-repeat="skill in skills">
                   
-                  <form name="sentMessage" id="contactForm" novalidate="" _lpchecked="1">
-                    <div class="row control-group">
-                      <div class="form-group col-xs-12 floating-label-form-group controls">
-                        <label>Name</label>
-                        <input type="text" class="form-control" placeholder="Name" id="name" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
-                        <p class="help-block text-danger"></p>
-                      </div>
-                    </div>
-                    <div class="row control-group">
-                      <div class="form-group col-xs-12 floating-label-form-group controls">
-                        <label>Email Address</label>
-                        <input type="email" class="form-control" placeholder="Email Address" id="email" required="" data-validation-required-message="Please enter your email address.">
-                        <p class="help-block text-danger"></p>
-                      </div>
-                    </div>
-                    <div class="row control-group">
-                      <div class="form-group col-xs-12 floating-label-form-group controls">
-                        <label>Phone Number</label>
-                        <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required="" data-validation-required-message="Please enter your phone number.">
-                        <p class="help-block text-danger"></p>
-                      </div>
-                    </div>
-                    <div class="row control-group">
-                      <div class="form-group col-xs-12 floating-label-form-group controls">
-                        <label>Message</label>
-                        <textarea rows="5" class="form-control" placeholder="Message" id="message" required="" data-validation-required-message="Please enter a message."></textarea>
-                        <p class="help-block text-danger"></p>
-                      </div>
-                    </div>
-                    <br>
-                    <div id="success"></div>
-                    <div class="row">
-                      <div class="form-group col-xs-12">
-                        <button type="submit" class="btn btn-success btn-lg">Send</button>
-                      </div>
-                    </div>
-                  </form>
+                  <a href="http://localhost:3000/">
+                    <img class="img-rounded" ng-src="img/{{skill}}.png">
+                  </a>
+                  
                 </div>
               </div>
-            </div>
-          </section>
-          
-          
-          <!-- Footer -->
-          <footer id="footer">
+              
+            </section>
             
-            <img ng-src="{{icon}}" ng-repeat="icon in icons">
-            <small>Developed and designed by <a href='mailto:x.a.reyes-ochoa@hotmail.com'>Xavi Ro</a>. &copy; 2015. All rights reserved.</small>
-            
-          </footer>
-          
-          <!-- jQuery first, then Bootstrap JS. -->
-          <script src="bower_components/jquery/dist/jquery.js"></script>
-          <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-          
-          <!-- Concatenated custom scripts -->
-          <script src="temp/app.js"></script>
-          
-        </body>
-      </html>
+            <!-- Experience section -->
+            <section id="experience" class="odd section">
+              
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h2>Experience</h2>
+                    <hr>
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col-sm-3 col-xs-6 image-container" ng-repeat="job in jobs">
+                    
+                    <!-- Experience section -->
+                    <a href="{{job.link}}">
+                      <img class="img-rounded" ng-src="img/{{job.logo}}.png">
+                    </a>
+                    <h4>{{job.name}}</h4>
+                    <p>{{job.desc}}</p>
+                    
+                  </div>
+                </div>
+                
+              </section>
+              
+              <!-- Contact -->
+              <section id="contact" class="even section">
+                
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <h2>Contact Me</h2>
+                      <hr>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2">
+                      
+                      <form name="sentMessage" id="contactForm" novalidate="" _lpchecked="1">
+                        <div class="row control-group">
+                          <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Name</label>
+                            <input type="text" class="form-control" placeholder="Name" id="name" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
+                            <p class="help-block text-danger"></p>
+                          </div>
+                        </div>
+                        <div class="row control-group">
+                          <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control" placeholder="Email Address" id="email" required="" data-validation-required-message="Please enter your email address.">
+                            <p class="help-block text-danger"></p>
+                          </div>
+                        </div>
+                        <div class="row control-group">
+                          <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required="" data-validation-required-message="Please enter your phone number.">
+                            <p class="help-block text-danger"></p>
+                          </div>
+                        </div>
+                        <div class="row control-group">
+                          <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Message</label>
+                            <textarea rows="5" class="form-control" placeholder="Message" id="message" required="" data-validation-required-message="Please enter a message."></textarea>
+                            <p class="help-block text-danger"></p>
+                          </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                          <div class="form-group col-xs-12">
+                            <button type="submit" class="btn btn-success btn-lg">Send</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+              
+              <!-- Footer -->
+              <footer id="footer">
+                
+                <img ng-src="{{icon}}" ng-repeat="icon in icons">
+                <small>Developed and designed by <a href='mailto:x.a.reyes-ochoa@hotmail.com'>Xavi Ro</a>. &copy; 2015. All rights reserved.</small>
+                
+              </footer>
+              
+              <!-- jQuery first, then Bootstrap JS. -->
+              <script src="bower_components/jquery/dist/jquery.js"></script>
+              <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+              
+              <!-- Concatenated custom scripts -->
+              <script src="temp/app.js"></script>
+              
+            </body>
+          </html>

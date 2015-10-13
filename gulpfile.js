@@ -70,6 +70,13 @@ gulp.task('images', function () {
     .pipe(livereload())
 });
 
+//Copy resources
+gulp.task('res', function () {
+    return gulp.src('res/**/*')
+    .pipe(gulp.dest('dist/res'))
+    .pipe(livereload())
+});
+
 //Replacing local links with CDNs and minify index.html
 gulp.task('cdn', function () {
     return gulp.src("index.html")
@@ -135,5 +142,5 @@ gulp.task('watch', function () {
 });
 
 // Default Task
-gulp.task('default', ['clean','sass', 'scripts', 'jsons', 'cdn', 'minify-html', 'images',
+gulp.task('default', ['clean','sass', 'scripts', 'jsons', 'cdn', 'minify-html', 'images', 'res',
     'watch','server']);

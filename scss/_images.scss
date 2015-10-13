@@ -1,20 +1,37 @@
 #navbar img {
-    height: 100%;
+height: 100%;
 }
 
 #portfolio img {
-    width: 100%;
+width: 100%;
 }
 
 #skillset img,
 #experience img {
-    height: 100px;
-}
-/* do this in the best way using mixins and making sure portfolio zoom work well
-img {
-    transition: all 0.5s ease;
+height: 10rem;
 }
 
-img:hover {
-    opacity: 0.75;
+
+
+
+
+/* do this in the best way using mixins and making sure portfolio zoom work well
+.full-color {
+background-color: $xr-orange1;
+max-width: 100%;
+font-size: 6rem;
+}
+
+.absolute {
+position: absolute;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+padding-left: auto;
+padding-right: auto;
+left: 0;
+right: 0;
+}
+
+
 }*/

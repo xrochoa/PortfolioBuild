@@ -1,0 +1,33 @@
+@import 'palette';
+@font-face {
+    font-family: Manteka;
+    src: url(../res/Mohave.otf);
+}
+
+body {
+    font-family: Manteka;
+    color: $xr-gray2;
+}
+
+.lead,
+.section {
+    letter-spacing: 0.3rem;
+}
+
+#header,
+#footer {
+    color: $xr-gray0;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+.half-size {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+}
+
+.glyphicon {
+    font-size: 10rem;
+}
