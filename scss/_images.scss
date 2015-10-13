@@ -1,18 +1,33 @@
 #navbar img {
-height: 100%;
+    height: 100%;
 }
 
 #portfolio img {
-width: 100%;
+    width: 100%;
 }
 
 #skillset img,
 #experience img {
-height: 10rem;
+    height: 10rem;
+    transition: all ease .5s;
+    border-radius: 2rem;
+    &:hover {
+        -webkit-filter: grayscale(0);
+        border-radius: 0rem;
+    }
 }
 
+#skillset img:hover {
+    cursor: context-menu;
+}
 
+#portfolio a:hover {
+    cursor: zoom-in;
+}
 
+#experience img:hover {
+    cursor: pointer;
+}
 
 
 /* do this in the best way using mixins and making sure portfolio zoom work well

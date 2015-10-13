@@ -2,6 +2,7 @@
 $amount: 3%;
 html,
 body {
+    position: relative;
     background: linear-gradient($mainClear, darken($mainClear, $amount));
 }
 

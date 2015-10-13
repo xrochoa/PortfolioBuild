@@ -21,7 +21,6 @@ $(function() {
             setTimeout(function() {
 
                 letter.removeClass('transparent');
-                console.log(i);
             }, 100 * i);
         });
 
@@ -31,7 +30,6 @@ $(function() {
             setTimeout(function() {
 
                 letter.addClass('transparent');
-                console.log(i);
             }, 100 * i);
         });
 
@@ -84,4 +82,7 @@ $(function() {
         }
 
     });
+
+        $('[data-toggle="tooltip"]').tooltip()
+        $('body').scrollspy({ target: '#collapsible' })
 });

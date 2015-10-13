@@ -1,0 +1,61 @@
+@import 'palette';
+.modal-content {
+    background-color: #ff7866;
+    padding: 0;
+}
+
+.resume {
+    text-align: left;
+    font-family: 'Open Sans';
+    #resume-head {
+        padding: 0 3% 1%;
+    }
+    #resume-body {
+        background-color: $mainClear;
+    }
+    #resume-footer {
+        padding: 2% 0 0;
+        margin-top: 3%;
+        background-color: #ff7866;
+    }
+    article {
+        padding: 0 5%;
+    }
+    ul {
+    	        padding-left: 5%;
+
+    }
+    h1 {
+        padding-top: 5%;
+        font-size: 24pt;
+        font-weight: 700;
+    }
+    h6 {
+        font-size: 8pt;
+    }
+    a {
+        color: $mainClear;
+        text-decoration: none;
+    }
+    h3,
+    p {
+        font-size: 11pt;
+    }
+    h3 {
+        width: 100%;
+        background-color: #36bed9;
+        color: $mainClear;
+        font-weight: bold;
+        padding: 1%;
+    }
+    h4 {
+        font-weight: bold;
+        font-size: 10pt;
+    }
+    li {
+        text-align: justify;
+    }
+    .circle-list {
+        list-style-type: circle;
+    }
+}

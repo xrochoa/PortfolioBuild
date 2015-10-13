@@ -25,3 +25,13 @@ hr {
     top: 50%;
     transform: translateY(-50%);
 }
+
+.tooltip-inner {
+    background-color: $mainDark;
+    color: $mainClear;
+    font-size: 2rem;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: $mainDark;
+}

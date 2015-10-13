@@ -33,8 +33,7 @@
     opacity: 0;
     background-color: $mainLight;
     transition: all ease .5s;
-}
-
-.full-color:hover {
-    opacity: 0.75;
+    &:hover {
+        opacity: 0.75;
+    }
 }
