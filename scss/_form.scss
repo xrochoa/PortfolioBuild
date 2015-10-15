@@ -1,0 +1,58 @@
+@import 'palette';
+.form-control,
+.form-control:focus {
+    font-size: 2rem;
+    color: $mainDark;
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: white;
+}
+
+.form-control:-moz-placeholder {
+    color: white;
+}
+
+.form-control::-moz-placeholder {
+    color: white;
+}
+
+.form-control:-ms-input-placeholder {
+    color: white;
+}
+
+label {
+    opacity: 0;
+    transition: all ease .5s;
+}
+
+.has-success .form-control,
+.has-success .form-control:focus,
+.has-error .form-control,
+.has-error .form-control:focus {
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.has-error {
+    .help-block,
+    .glyphicon {
+        color: $xr-yellow1;
+    }
+}
+
+.has-success {
+    .help-block,
+    .glyphicon {
+        color: $xr-green1;
+    }
+}
+
+textarea {
+    resize: none
+}

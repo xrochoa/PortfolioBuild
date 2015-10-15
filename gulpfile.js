@@ -21,7 +21,7 @@ var del = require('del');
 
 // Clean folders before tasks
 gulp.task('clean', function () {
-    del(['temp/*','dist/*'])
+    del(['temp/**/*','dist/**/*'])
 });
 
 // Compile Our Sass
@@ -79,7 +79,7 @@ gulp.task('res', function () {
 
 //Replacing local links with CDNs and minify index.html
 gulp.task('cdn', function () {
-    return gulp.src("index.html")
+    return gulp.src(['index.html', '404.html'])
     .pipe(cdnizer([
     {
         file: 'bower_components/angular/angular.js',
@@ -108,7 +108,13 @@ gulp.task('cdn', function () {
     {
         file: 'temp/app.js',
         cdn: 'js/app.min.js'
+    },
+    {
+        file: 'bower_components/bootstrap-validator/dist/validator.js',
+        package: 'jquery',
+        cdn: 'https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/${ version }/validator.min.js'
     }
+
     ]))
 .pipe(minifyHTML())
 .pipe(gulp.dest("dist"))

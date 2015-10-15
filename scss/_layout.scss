@@ -11,6 +11,10 @@ body {
     background: linear-gradient($mainDark, darken($mainDark, $amount));
 }
 
+#name {
+    height: 5rem;
+}
+
 .even,
 #navbar {
     background: linear-gradient($mainLight, darken($mainLight, $amount));

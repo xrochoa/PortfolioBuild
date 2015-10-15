@@ -1,0 +1,11 @@
+#contact button, .modal-subcontainer a {
+    background-color: $mainSecond;
+    color: $mainClear;
+    border: 1px solid darken($mainSecond, 5%);
+    margin: 3rem;
+    &:hover {
+        background-color: darken($mainSecond, 5%);
+        border: 1px solid darken($mainSecond, 10%);
+        color: $mainClear;
+    }
+}

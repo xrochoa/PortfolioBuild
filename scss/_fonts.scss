@@ -1,11 +1,6 @@
 @import 'palette';
-@font-face {
-    font-family: Manteka;
-    src: url(../res/Mohave.otf);
-}
-
 body {
-    font-family: Manteka;
+    font-family: 'Montserrat', sans-serif;
     color: $xr-gray2;
 }
 
@@ -15,7 +10,7 @@ body {
 }
 
 #header,
-#footer {
+#footer, .even {
     color: $xr-gray0;
 }
 
@@ -28,6 +23,6 @@ h2 {
     letter-spacing: 0.3rem;
 }
 
-.glyphicon {
+#portfolio .glyphicon {
     font-size: 10rem;
 }

@@ -8,12 +8,25 @@
 
 #skillset img,
 #experience img {
-    height: 10rem;
+    width: 10rem;
+    max-width: 100%;
     transition: all ease .5s;
     border-radius: 2rem;
-    &:hover {
-        -webkit-filter: grayscale(0);
+
+}
+
+#experience .image-container {
+    height: 20rem;
+  
+
+    img {
+        width: 15rem;
+background-color: $mainLight;
+padding: 0.5rem;
+      &:hover {
+        //-webkit-filter: grayscale(0);
         border-radius: 0rem;
+    }
     }
 }
 

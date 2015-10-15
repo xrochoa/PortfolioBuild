@@ -4,10 +4,10 @@
     padding: 0;
 }
 
-.resume {
+.modal-subcontainer {
     text-align: left;
     font-family: 'Open Sans';
-    #resume-head {
+    .modal-head {
         padding: 0 3% 1%;
     }
     #resume-body {
@@ -58,4 +58,8 @@
     .circle-list {
         list-style-type: circle;
     }
+}
+
+.color-cleared {
+        background-color: $mainClear;
 }

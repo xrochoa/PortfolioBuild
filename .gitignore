@@ -8,3 +8,6 @@ node_modules
 # Dist and temp folder
 dist
 temp
+
+# Post messages
+contactform.json

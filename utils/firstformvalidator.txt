@@ -1,0 +1,10 @@
+data-error="Please give me a valid email address so I can write you back." required
+
+data-error="Please give me a valid phone number so I can call you back." required
+
+data-error="Please describe the reason of contact so I can gladly help you." required
+
+data-error="Please give me a valid name to know who you are." required
+
+                          
+                          <div class="help-block with-errors"></div>

@@ -1,6 +1,6 @@
 @import 'palette';
 hr {
-    height: 1rem;
+    height: 0.1rem;
     max-width: 100%;
     border: 0;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $mainLight, rgba(0, 0, 0, 0));
@@ -13,7 +13,7 @@ hr {
 }
 
 .section hr {
-    height: 0.5rem;
+    //height: 0.5rem;
 }
 
 .zoom-icon {
