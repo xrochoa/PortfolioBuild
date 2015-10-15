@@ -13,17 +13,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     
+    <!-- Google font -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    
     <!-- Compiled and concatenated custom scss -->
     <link rel="stylesheet" href="temp/style.css">
     
     <!-- Angular JS and Modules -->
     <script src="bower_components/angular/angular.js"></script>
     <!-- <script src="bower_components/angular-route/angular-route.js"></script> -->
-    
-    
-    <!-- Google font for resume -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     
   </head>
   
@@ -79,10 +77,10 @@
               <div class="collapse navbar-collapse" id="collapsible">
                 <ul class="nav navbar-nav navbar-right">
                   
-                  <li class="active"><a href="#portfolio" target="_self">Portfolio<span class="sr-only">(current)</span></a></li>
-                  <li><a href="#skillset" target="_self">Skill Set</a></li>
-                  <li><a href="#experience" target="_self">Experience</a></li>
-                  <li><a href="#contact" target="_self">Contact</a></li>
+                  <li class="active"><a ng-href="#portfolio" target="_self">Portfolio<span class="sr-only">(current)</span></a></li>
+                  <li><a ng-href="#skillset" target="_self">Skill Set</a></li>
+                  <li><a ng-href="#experience" target="_self">Experience</a></li>
+                  <li><a ng-href="#contact" target="_self">Contact</a></li>
                   
                 </ul>
               </div>
@@ -100,7 +98,7 @@
             <div class="row">
               <div class="col-xs-12">
                 <h2>Portfolio</h2>
-                <hr>
+                <hr class="section-hr">
               </div>
             </div>
             
@@ -111,7 +109,7 @@
                   
                   <div class="col-sm-4 col-xs-12 image-container" ng-repeat="item in [0,1,2,3,4,5]">
                     
-                    <a class="link-block" ng-click="changeView('portfolio.html'); changeProject(item)" data-toggle="modal" data-target=".portfolio-modal">
+                    <a class="link-block" ng-click="changeView('portfolio.html');changeProject(item);alterHash('project'+item);launchkModal1()">
                       <div class="full-color">
                         <div class="zoom-icon">
                           <span class="glyphicon glyphicon-zoom-in"></span>
@@ -147,7 +145,7 @@
               <div class="row">
                 <div class="col-xs-12">
                   <h2>Skillset</h2>
-                  <hr>
+                  <hr class="section-hr">
                 </div>
               </div>
               
@@ -168,7 +166,7 @@
                 <div class="row">
                   <div class="col-xs-12">
                     <h2>Experience</h2>
-                    <hr>
+                    <hr class="section-hr">
                   </div>
                 </div>
                 
@@ -176,7 +174,8 @@
                   <div class="col-sm-3 col-xs-6 image-container" data-toggle="tooltip" data-placement="top" title="More details on my resume" ng-repeat="job in jobs">
                     
                     <!-- Experience section -->
-                    <img ng-src="img/{{job.logo}}.png" data-toggle="modal" data-target=".resume-modal">
+                    <img ng-src="img/{{job.logo}}.png" ng-click="alterHash('resume');launchkModal2()">
+                   <!-- data-toggle="modal" data-target=".resume-modal"-->
                     <h5>{{job.name}}</h5>
                     <p class="hidden-xs">{{job.desc}}</p>
                     
@@ -201,8 +200,8 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-12">
-                      <h2>Contact Me</h2>
-                      <hr>
+                      <h2>Contact</h2>
+                      <hr class="section-hr">
                     </div>
                   </div>
                   
@@ -283,6 +282,7 @@
           <!-- jQuery first, then Bootstrap JS, then bootstrap form validator -->
           <script src="bower_components/jquery/dist/jquery.js"></script>
           <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
           <!-- FormValidation plugin and the class supports validating Bootstrap form -->
           <script src="bower_components/formvalidation-master/dist/js/formValidation.min.js"></script>
           <script src="bower_components/formvalidation-master/dist/js/framework/bootstrap.min.js"></script>

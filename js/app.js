@@ -1,17 +1,22 @@
 angular.module("appFolio", [])
-    .controller('mainCtrl', ['$scope', function($scope) {
+    .controller('mainCtrl', ['$scope', '$location', function($scope, $location) {
+
+
+        $scope.alterHash = function(hash) {
+            $location.hash(hash);
+        };
 
 
         $scope.navitems = ['Portfolio', 'Skillset', 'Experience', 'Contact'];
 
         $scope.changeView = function(view) {
             $scope.view = 'views/' + view;
-        }
+        };
 
         $scope.changeProject = function(number) {
             $scope.project = $scope.projectData[number];
             $scope.project.number = number;
-        }
+        };
 
         $scope.projectData = [{
             'title': 'Risk Visualizer',
@@ -100,5 +105,54 @@ angular.module("appFolio", [])
         }];
     }])
     .config(function($locationProvider) {
-        $locationProvider.html5Mode(true);
+
+        //fixes angular confusion of # anchor links
+        $locationProvider.html5Mode(true).hashPrefix('!');
+    })
+    .run(function($rootScope, $location) {
+
+        $rootScope.$watch(function() {
+                return $location.hash();
+            },
+            function(hash) {
+                console.log('url has changed: ' + hash);
+
+                //handles checking route and showing portfolio modal
+                var portfolioModal = $('.portfolio-modal');
+
+                $rootScope.launchkModal1 = function() {
+                    switch ($location.hash()) {
+                        case 'project0':
+                        case 'project1':
+                        case 'project2':
+                        case 'project3':
+                        case 'project4':
+                        case 'project5':
+                            portfolioModal.modal();
+                            break;
+                        default:
+                            portfolioModal.modal('hide');
+
+                    }
+
+                };
+
+                //handles checking route and showing resume modal
+                var resumeModal = $('.resume-modal');
+
+                $rootScope.launchkModal2 = function() {
+
+                    if ($location.hash() === 'resume') {
+                        resumeModal.modal();
+                    } else {
+                        resumeModal.modal('hide');
+                    }
+                };
+
+                //runs previous functions on path change with watch
+                $rootScope.launchkModal1();
+                $rootScope.launchkModal2();
+
+
+            });
     });

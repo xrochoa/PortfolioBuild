@@ -86,9 +86,10 @@ $(function() {
 
     $('[data-toggle="tooltip"]').tooltip();
 
+    /*
     body.scrollspy({
         target: '#collapsible'
-    });
+    });*/
 
 
     /*

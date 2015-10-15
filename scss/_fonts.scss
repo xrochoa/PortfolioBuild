@@ -26,3 +26,9 @@ h2 {
 #portfolio .glyphicon {
     font-size: 10rem;
 }
+
+@media (max-width: 460px) {
+    h1, h2 {font-size: 2rem;}
+    // not working...because of jquery #scrollFade {display: none;}
+    h5 {display: none;}
+}

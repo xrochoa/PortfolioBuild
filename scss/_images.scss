@@ -12,21 +12,18 @@
     max-width: 100%;
     transition: all ease .5s;
     border-radius: 2rem;
-
 }
 
 #experience .image-container {
     height: 20rem;
-  
-
     img {
         width: 15rem;
-background-color: $mainLight;
-padding: 0.5rem;
-      &:hover {
-        //-webkit-filter: grayscale(0);
-        border-radius: 0rem;
-    }
+        background-color: $mainLight;
+        padding: 0.5rem;
+        &:hover {
+            //-webkit-filter: grayscale(0);
+            border-radius: 0rem;
+        }
     }
 }
 
@@ -42,24 +39,7 @@ padding: 0.5rem;
     cursor: pointer;
 }
 
-
-/* do this in the best way using mixins and making sure portfolio zoom work well
-.full-color {
-background-color: $xr-orange1;
-max-width: 100%;
-font-size: 6rem;
+//solves modal problem with images
+.img-responsive {
+    display: inline;
 }
-
-.absolute {
-position: absolute;
-width: 100%;
-margin-left: auto;
-margin-right: auto;
-padding-left: auto;
-padding-right: auto;
-left: 0;
-right: 0;
-}
-
-
-}*/
