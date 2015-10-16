@@ -7,6 +7,25 @@ var srcApp = express();
 var distApp = express();
 
 
+function postRequest(req) {
+
+    //current time
+    var now = moment().format();
+    //changed the format of received data
+    var receivedData = '{ "' + now + '" : ' + JSON.stringify(req.body, null, 4) + '\n},';
+
+    //write file with requests
+    fs.appendFile('contactform.json', receivedData, function(err) {
+
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("Data has been added!");
+        }
+    });
+};
+
+
 // Serves source code
 var server1 = srcApp.listen(4000, function() {
 
@@ -23,21 +42,7 @@ var server1 = srcApp.listen(4000, function() {
     srcApp.post('/', function(req, res) {
         console.log(req.body);
         res.sendStatus(200);
-
-        //current time
-        var now = moment().format();
-        //changed the format of received data
-        var receivedData = '{ "' + now + '" : ' + JSON.stringify(req.body, null, 4) + '\n},';
-
-        //write file with requests
-        fs.appendFile('contactform.json', receivedData, function(err) {
-
-            if (err) {
-                console.log(err);
-            } else {
-                console.log("Data has been added!");
-            }
-        });
+        postRequest(req);
 
     });
 
@@ -60,6 +65,17 @@ var server2 = distApp.listen(8000, function() {
     distApp.get('/', function(req, res) {
         res.sendFile(__dirname + '/dist/index.html');
     });
+
+    // POST method route
+    distApp.use(bodyParser.urlencoded({
+        extended: true
+    }));
+    distApp.post('/', function(req, res) {
+        console.log(req.body);
+        res.sendStatus(200);
+        postRequest(req);
+    });
+
 
     //404 not found
     distApp.get('*', function(req, res) {

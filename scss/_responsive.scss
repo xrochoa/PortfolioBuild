@@ -1,0 +1,45 @@
+#min-email {
+    display: none;
+    font-size: 1rem;
+}
+
+@media (max-width: 460px) {
+    h1,
+    h2 {
+        font-size: 2rem;
+    }
+    // not working...because of jquery #scrollFade {display: none;}
+    #experience .image-container {
+        height: auto;
+    }
+    h5 {
+        display: none;
+    }
+    #scrollFade {
+        font-size: 1.5rem;
+    }
+    .half-size,
+    .min-footer  {
+        display: none;
+    }
+    .form-control,
+    .form-control:focus {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 270px) {
+    #scrollFade {
+        font-size: 0rem;
+    }
+    h1,
+    h2 {
+        font-size: 1.5rem;
+    }
+    form{
+        display: none;
+    }
+    #min-email {
+        display: block;
+    }
+}

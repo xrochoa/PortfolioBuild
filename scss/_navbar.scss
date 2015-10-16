@@ -2,6 +2,7 @@
 .navbar-custom {
     box-shadow: 0px 0px 10px 1px $xr-gray2;
     .navbar-brand {
+        transition: all ease .3s;
         color: $mainDark;
         &:hover,
         &:focus {

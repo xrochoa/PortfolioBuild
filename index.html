@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Template</title>
+    <title>Xavier Reyes Ochoa - Developer</title>
+    
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     
     <!-- Removes # in Angular routes -->
     <base href="/">
@@ -66,7 +70,7 @@
               </button>
               
               <!-- Navbar Brand -->
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="http://www.xaviro.com">
                 <span><img class="img-circle" alt="xaviro.com" src="img/xs.png">
                   <span id="scrollFade"> Xavier Reyes Ochoa <span class="half-size">Developer</span></span></span>
                 </a>
@@ -107,15 +111,15 @@
               <div class="container-fluid">
                 <div class="row">
                   
-                  <div class="col-sm-4 col-xs-12 image-container" ng-repeat="item in [0,1,2,3,4,5]">
+                  <div class="col-sm-4 col-xs-12 image-container" ng-repeat="item in projectData">
                     
-                    <a class="link-block" ng-click="changeView('portfolio.html');changeProject(item);alterHash('project'+item);launchkModal1()">
+                    <a class="link-block" ng-click="changeProject(item.number);alterHash(item.code);launchkModal1()">
                       <div class="full-color">
                         <div class="zoom-icon">
                           <span class="glyphicon glyphicon-zoom-in"></span>
                         </div>
                       </div>
-                      <img src="img/p{{item}}.png" class="img-responsive">
+                      <img ng-src="img/p{{item.number}}.png" class="img-responsive">
                     </a>
                     
                   </div>
@@ -132,7 +136,7 @@
           <div class="modal fade portfolio-modal" tabindex="-1" role="dialog" aria-labelledby="Portfolio Projects">
             <div class="modal-dialog modal-lg">
               <div class="modal-content color-cleared">
-                <div ng-include src="view"></div>
+                <div ng-include src="'views/portfolio.html'"></div>
               </div>
             </div>
           </div>
@@ -175,7 +179,7 @@
                     
                     <!-- Experience section -->
                     <img ng-src="img/{{job.logo}}.png" ng-click="alterHash('resume');launchkModal2()">
-                   <!-- data-toggle="modal" data-target=".resume-modal"-->
+                    <!-- data-toggle="modal" data-target=".resume-modal"-->
                     <h5>{{job.name}}</h5>
                     <p class="hidden-xs">{{job.desc}}</p>
                     
@@ -264,28 +268,34 @@
                     </div>
                     
                   </form>
-                  
+                  <div id="min-email">x.a.reyes-ochoa@hotmail.com</div>
                 </div>
               </div>
+
+              <div id="social-media"><a href="https://www.linkedin.com/pub/xavier-alejandro-reyes-ochoa/82/184/b89"><img id="linkedin" src="img/linkedin.png"></a>&nbsp;<a href="https://github.com/xrochoa"><img id="github" src="img/github.png"></a>&nbsp;<a href="https://www.facebook.com/XavierAlejandroReyesOchoa"><img id="facebook" src="img/facebook.png"></a></div>
+              
+              
             </div>
           </section>
-          
           
           <!-- Footer -->
           <footer id="footer">
             
             <img ng-src="{{icon}}" ng-repeat="icon in icons">
-            <small>Developed and designed by <a href='mailto:x.a.reyes-ochoa@hotmail.com'>Xavi Ro</a>. &copy; 2015. All rights reserved.</small>
+            <small><span>Developed and designed by&nbsp;</span><a href='mailto:x.a.reyes-ochoa@hotmail.com'>Xavi Ro</a>. &copy; <script type="text/javascript">
+            var d = new Date()
+            document.write(d.getFullYear())
+            </script><span class="min-footer">. All rights reserved.</span></small>
             
           </footer>
           
           <!-- jQuery first, then Bootstrap JS, then bootstrap form validator -->
           <script src="bower_components/jquery/dist/jquery.js"></script>
           <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-
-          <!-- FormValidation plugin and the class supports validating Bootstrap form -->
+          
+          <!-- FormValidation plugin and the class supports validating Bootstrap form
           <script src="bower_components/formvalidation-master/dist/js/formValidation.min.js"></script>
-          <script src="bower_components/formvalidation-master/dist/js/framework/bootstrap.min.js"></script>
+          <script src="bower_components/formvalidation-master/dist/js/framework/bootstrap.min.js"></script>-->
           
           <!-- Concatenated custom scripts -->
           <script src="temp/app.js"></script>
