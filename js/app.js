@@ -22,7 +22,7 @@ angular.module("appFolio", [])
                 case 'fridgebinge':
                 case 'hdrgallery':
                 case 'defref':
-                case 'audioportfolio':
+                case 'carcrash':
                 case 'various':
                     $scope.$apply(function() {
                         $scope.alterHash('portfolio');
@@ -45,39 +45,51 @@ angular.module("appFolio", [])
         $rootScope.projectData = [{
             'title': 'Risk Visualizer',
             'description': 'Responsive web app to visualize health risk',
-            'client': 'Kindra Clark-Snustad (University of Washington Nurse Practitioner)',
+            'technology': 'HTML Canvas, AngularJS, Bootstrap',
+            'client': 'University of Washington Nurse Practitioner',
             'code': 'riskvisualizer',
+            'link': 'http://riskvisualizer.xaviro.com/',
             'number': 0
         }, {
             'title': 'Fridge Binge',
-            'description': 'Two web games and a website for a startup',
-            'client': 'Aaron Hunter & Tyler Warren (Google Maps Visual Data Specialists)',
+            'description': 'Website for retro games startup',
+            'technology': 'MEAN Stack (MongoDB, Express, AngularJS, Node.js), Handlebars, Passport (Local Authentication)',
+            'client': 'Seattle Entrepreneurs',
             'code': 'fridgebinge',
+            'link': 'http://www.fridgebinge.com/',
             'number': 1
         }, {
             'title': 'HDR Photography',
-            'description': 'An web galery showcasing HDR photos of 16 US National Parks',
+            'description': 'Web galery showcasing HDR photos of National Parks',
+            'technology': 'Bootstrap, AngularJS, ngRoute',
             'client': 'Personal Project',
             'code': 'hdrgallery',
+            'link': 'http://photogallery.xaviro.com/',
             'number': 2
         }, {
-            'title': 'DevRef.com',
-            'description': 'A reference site for a javascript developer',
+            'title': 'Developer\'s Reference',
+            'description': 'Reference site for javascript developers',
+            'technology': 'Bootstrap, AngularJS, Sass',
             'client': 'Personal Project',
             'code': 'defref',
+            'link': 'http://devref.xaviro.com/',
             'number': 3
         }, {
-            'title': 'Jason McDonald',
-            'description': 'Portfolio for an Audio Engineer',
-            'client': 'Jason McDonald (Recording Studio Owner)',
-            'code': 'audioportfolio',
+            'title': 'Car Crash',
+            'description': 'Retro javascript game',
+            'technology': 'Phaser, Browserify, Photoshop',
+            'client': 'Seattle Entrepreneurs',
+            'code': 'carcrash',
+            'link': 'http://www.fridgebinge.com/carcrash',
             'number': 4
 
         }, {
-            'title': 'Smaller Projects',
-            'description': 'A collection of various porjects',
-            'client': 'Various',
+            'title': 'Back to the 80\'s',
+            'description': 'Eighties themed site',
+            'technology': 'Bootstrap, Photoshop, Final Cut',
+            'client': 'Personal Project',
             'code': 'various',
+            'link': 'http://80s.xaviro.com/',
             'number': 5
         }];
 
@@ -124,23 +136,15 @@ angular.module("appFolio", [])
         //EXPERIENCE
         $scope.jobs = [{
             name: "Randstad at Google",
-            desc: "",
-            link: "",
             logo: "rand"
         }, {
             name: "Freelancer",
-            desc: "",
-            link: "",
-            logo: "x"
+            logo: "free"
         }, {
             name: "National Polytechnic School",
-            desc: "",
-            link: "",
             logo: "epn"
         }, {
             name: "Ecuadorian Ministry of Development",
-            desc: "",
-            link: "",
             logo: "mdd"
         }];
     }])
@@ -189,7 +193,7 @@ angular.module("appFolio", [])
                             portfolioModal.modal();
                             $rootScope.changeProject(3);
                             break;
-                        case 'audioportfolio':
+                        case 'carcrash':
                             portfolioModal.modal();
                             $rootScope.changeProject(4);
                             break;

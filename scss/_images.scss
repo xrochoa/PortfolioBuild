@@ -27,6 +27,10 @@
     }
 }
 
+#portfolio img, .portfolio-modal img {
+    box-shadow: 0 0 10px darken($xr-gray1, 12%);
+}
+
 #skillset img:hover {
     cursor: context-menu;
 }
