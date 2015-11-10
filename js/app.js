@@ -56,12 +56,12 @@ angular.module("appFolio", [])
             'technology': 'MEAN Stack (MongoDB, Express, AngularJS, Node.js), Handlebars, Passport (Local Authentication)',
             'client': 'Seattle Entrepreneurs',
             'code': 'fridgebinge',
-            'link': 'http://www.fridgebinge.com/',
+            'link': 'http://fridgebinge.xaviro.com/',
             'number': 1
         }, {
             'title': 'HDR Photography',
             'description': 'Web galery showcasing HDR photos of National Parks',
-            'technology': 'Bootstrap, AngularJS, ngRoute',
+            'technology': 'Bootstrap, AngularJS, Browserify',
             'client': 'Personal Project',
             'code': 'hdrgallery',
             'link': 'http://photogallery.xaviro.com/',
@@ -80,7 +80,7 @@ angular.module("appFolio", [])
             'technology': 'Phaser, Browserify, Photoshop',
             'client': 'Seattle Entrepreneurs',
             'code': 'carcrash',
-            'link': 'http://www.fridgebinge.com/carcrash',
+            'link': 'http://fridgebinge.xaviro.com/carcrash',
             'number': 4
 
         }, {
@@ -96,42 +96,82 @@ angular.module("appFolio", [])
 
         //SKILLS
         $scope.skills = [{
-            'icon': 'html',
-            'name': 'HTML5'
-        }, {
-            'icon': 'css',
-            'name': 'CSS3'
-        }, {
-            'icon': 'js',
-            'name': 'JavaScript'
-        }, {
-            'icon': 'jquery',
-            'name': 'JQuery'
-        }, {
-            'icon': 'angular',
-            'name': 'AngularJS'
-        }, {
-            'icon': 'bootstrap',
-            'name': 'Bootstrap'
-        }, {
-            'icon': 'sass',
-            'name': 'Sass'
-        }, {
-            'icon': 'git',
-            'name': 'Git & GitHub'
-        }, {
-            'icon': 'node',
-            'name': 'Node.js'
-        }, {
-            'icon': 'gulp',
-            'name': 'Gulp'
-        }, {
-            'icon': 'mongo',
-            'name': 'MongoDB'
-        }, {
-            'icon': 'karma',
-            'name': 'Karma'
-        }];
+                'icon': 'html',
+                'name': 'HTML5'
+            }, {
+                'icon': 'css',
+                'name': 'CSS3'
+            }, {
+                'icon': 'js',
+                'name': 'JavaScript'
+            }, {
+                'icon': 'jquery',
+                'name': 'JQuery'
+            }, {
+                'icon': 'angular',
+                'name': 'AngularJS'
+            }, {
+                'icon': 'bootstrap',
+                'name': 'Bootstrap'
+            }, {
+                'icon': 'sass',
+                'name': 'Sass'
+            }, {
+                'icon': 'git',
+                'name': 'Git & GitHub'
+            }, {
+                'icon': 'node',
+                'name': 'Node.js'
+            }, {
+                'icon': 'gulp',
+                'name': 'Gulp'
+            }, {
+                'icon': 'mongo',
+                'name': 'MongoDB & Mongoose'
+            }, {
+                'icon': 'npm',
+                'name': 'npm & Bower'
+            }, {
+                'icon': 'express',
+                'name': 'Express'
+            }, {
+                'icon': 'browserify',
+                'name': 'Browserify'
+            }, {
+                'icon': 'karma',
+                'name': 'Karma'
+            }, {
+                'icon': 'passport',
+                'name': 'Passport'
+            }, {
+                'icon': 'sublime',
+                'name': 'Sublime'
+            }, {
+                'icon': 'bash',
+                'name': 'Bash'
+            }, {
+                'icon': 'phaser',
+                'name': 'Phaser'
+            }, {
+                'icon': 'photoshop',
+                'name': 'Photoshop & Gimp'
+            }
+
+            /*,{
+                'icon': 'nginx',
+                'name': 'Nginx'
+            },  {
+                'icon': 'logic',
+                'name': 'Logic Pro'
+            }, {
+                'icon': 'finalcut',
+                'name': 'Final Cut Pro'
+            },{
+                'icon': 'docs',
+                'name': 'Google Docs'
+            }*/
+
+        ];
 
         //EXPERIENCE
         $scope.jobs = [{
