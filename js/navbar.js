@@ -194,7 +194,7 @@ $(function() {
             var formData = $(e.target);
 
             $.ajax({
-                url: "/",
+                url: "http://fridgebinge.xaviro.com/contact",
                 type: "POST",
                 data: formData.serialize()
             }).done(function(response) {
@@ -202,10 +202,10 @@ $(function() {
                 generateCaptcha();
 
 
-                $("#success").html('You are good to go!');
+                $("#success").html('Message sent!');
 
             }).fail(function(jqXHR, textStatus, errorThrown) {
-                $("#success").html('Sorry, the server is probably bussy. Try again in some minutes or write me directly to my email.');
+                $("#success").html('Sorry, there was a server error. Try again soon or use my email.');
             });
 
         });

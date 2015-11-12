@@ -1,11 +1,14 @@
+
 var fs = require('fs');
 var moment = require('moment');
 var express = require('express');
 var bodyParser = require('body-parser');
 
+
+var sendgrid = require('sendgrid')(name, password;
 //SENDGRID EMAIL
 
-var sendgrid  = require('sendgrid')('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');
+
 
 var srcApp = express();
 var distApp = express();
@@ -13,31 +16,46 @@ var distApp = express();
 
 function postRequest(req, res) {
 
-    sendgrid.send({
-      to:       'xareyesochoa@gmail.com',
-      from:     'xaviro@xaviro.com',
-      subject:  'Portfolio Email',
-      text:     req.body
-    }, function(err, json) {
-      if (err) { return res.send('There was an error with the server. Please try again in some minutes');
- }
-        res.sendStatus(200);
+    var textMessage = '<b>Name: </b>' + req.body.name + '<br>' + '<b>Email: </b>' + req.body.email + '<br>' + '<b>Phone: </b>' + req.body.phone + '<br>' + '<b>Message: </b>' + req.body.message + '<br>' + '<b>Date: </b>' + moment().format('MMMM Do YYYY, h:mm:ss a');
+
+
+    var email = new sendgrid.Email({
+        to: 'xareyesochoa@gmail.com',
+        from: 'noreply@xaviro.com',
+        subject: 'Portfolio Contact Form',
+        html: textMessage
     });
-/* THIS WOULD SAVE MY MAIL IN A FILE ON THE COMPUTER BUT CHANGED TO SENDGRID
-    //current time
-    var now = moment().format();
-    //changed the format of received data
-    var receivedData = '{ "' + now + '" : ' + JSON.stringify(req.body, null, 4) + '\n},';
 
-    //write file with requests
-    fs.appendFile('contactform.json', receivedData, function(err) {
+    console.log(email);
 
+    sendgrid.send(email, function(err, json) {
         if (err) {
+            return res.sendStatus(550);
             console.log(err);
         } else {
-            console.log("Data has been added!");
+            return res.sendStatus(200);
+            console.log('Success!');
+            console.log(json);
+
         }
-    });*/
+
+
+    });
+    /* THIS WOULD SAVE MY MAIL IN A FILE ON THE COMPUTER BUT CHANGED TO SENDGRID
+        //current time
+        var now = moment().format();
+        //changed the format of received data
+        var receivedData = '{ "' + now + '" : ' + JSON.stringify(req.body, null, 4) + '\n},';
+
+        //write file with requests
+        fs.appendFile('contactform.json', receivedData, function(err) {
+
+            if (err) {
+                console.log(err);
+            } else {
+                console.log("Data has been added!");
+            }
+        });*/
 };
 
 
@@ -54,8 +72,10 @@ var server1 = srcApp.listen(4000, function() {
     srcApp.use(bodyParser.urlencoded({
         extended: true
     }));
+
+
     srcApp.post('/', function(req, res) {
-        postRequest(req.body, res);
+        postRequest(req, res);
 
     });
 
@@ -83,8 +103,10 @@ var server2 = distApp.listen(8000, function() {
     distApp.use(bodyParser.urlencoded({
         extended: true
     }));
+
+
     distApp.post('/', function(req, res) {
-        postRequest(req.body, res);
+        postRequest(req, res);
     });
 
 
