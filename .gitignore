@@ -7,7 +7,3 @@ node_modules
 
 # Dist and temp folder
 dist
-temp
-
-# Contact messages
-contactform.json 
