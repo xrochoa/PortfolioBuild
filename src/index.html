@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Xavier Reyes Ochoa - Developer</title>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Removes # in Angular routes -->
+    <base href="/">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <!-- Google font -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <!-- Compiled and concatenated custom scss -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Angular JS and Modules -->
+    <script src="angular/angular.js"></script>
+    <!-- <script src="bower_components/angular-route/angular-route.js"></script> -->
+</head>
+
+<body class="text-center" data-spy="scroll" data-target="#collapsible" ng-app="appFolio" ng-controller="mainCtrl">
+    <!-- Header-->
+    <header id="header">
+        <div class="container-fluid">
+            <div class="row">
+                <img class="img-circle" id="header-logo" src="img/xl.png">
+                <div class="col-xs-12">
+                    <h1 id="name">
+            <span class="com">w</span><span class="com">w</span><span class="com">w</span><span class="com">.</span>
+            <span>XAVI</span><span class="xaviro transparent">E</span><span class="xaviro transparent">R</span><span class="xaviro transparent"> </span>
+            <span>R</span><span class="xaviro transparent">E</span><span class="xaviro transparent">Y</span><span class="xaviro transparent">E</span><span class="xaviro transparent">S</span><span class="xaviro transparent"> </span>
+            <span>O</span><span class="xaviro transparent">C</span><span class="xaviro transparent">H</span><span class="xaviro transparent">O</span><span class="xaviro transparent">A</span>
+            <span class="com">.</span><span class="com">c</span><span class="com">o</span><span class="com">m</span>
+            </h1>
+                    <hr>
+                    <p><span class="lead">Full-Stack JavaScript Developer</span></p>
+                </div>
+            </div>
+    </header>
+    <!-- Navbar-->
+    <div id="navParent">
+        <nav class="navbar navbar-custom" id="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <!-- Collapsible button -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsible" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Navbar Brand -->
+                    <a class="navbar-brand" href="http://www.xaviro.com">
+                        <span><img class="img-circle" alt="xaviro.com" src="img/xs.png">
+                  <span id="scrollFade"> Xavier Reyes Ochoa <span class="half-size">Developer</span></span>
+                        </span>
+                    </a>
+                </div>
+                <!-- Collapsible -->
+                <div class="collapse navbar-collapse" id="collapsible">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a ng-href="#portfolio" target="_self">Portfolio<span class="sr-only">(current)</span></a></li>
+                        <li><a ng-href="#skillset" target="_self">Skill Set</a></li>
+                        <li><a ng-href="#experience" target="_self">Experience</a></li>
+                        <li><a ng-href="#contact" target="_self">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Project section -->
+    <section id="portfolio" class="odd section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Portfolio</h2>
+                    <hr class="section-hr">
+                </div>
+            </div>
+            <article>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12 image-container" ng-repeat="item in projectData">
+                            <a class="link-block" ng-click="changeProject(item.number);alterHash(item.code);launchkModal1()">
+                                <div class="full-color">
+                                    <div class="zoom-icon">
+                                        <span class="glyphicon glyphicon-zoom-in"></span>
+                                    </div>
+                                </div>
+                                <img ng-src="img/portfolio/p{{item.number}}.png" class="img-responsive">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+    </section>
+    <!-- Large modal -->
+    <div class="modal fade portfolio-modal" tabindex="-1" role="dialog" aria-labelledby="Portfolio Projects">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content color-cleared">
+                <div ng-include src="'views/portfolio.html'"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Skillset section -->
+    <section id="skillset" class="even section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Skillset</h2>
+                    <hr class="section-hr">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-xs-4 image-container" ng-repeat="skill in skills">
+                    <img ng-src="img/skills/{{skill.icon}}.png" data-toggle="tooltip" data-placement="top" title="{{skill.name}}" alt="{{skill.name}}">
+                </div>
+            </div>
+    </section>
+    <!-- Experience section -->
+    <section id="experience" class="odd section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Experience</h2>
+                    <hr class="section-hr">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-xs-6 image-container" data-toggle="tooltip" data-placement="top" title="More details on my resume" ng-repeat="job in jobs">
+                    <!-- Experience section -->
+                    <img ng-src="img/experience/{{job.logo}}.png" ng-click="alterHash('resume');launchkModal2()">
+                    <!-- data-toggle="modal" data-target=".resume-modal"-->
+                    <h5>{{job.name}}</h5>
+                    <p class="hidden-xs">{{job.desc}}</p>
+                </div>
+            </div>
+    </section>
+    <!-- Large modal -->
+    <div class="modal fade resume-modal" tabindex="-1" role="dialog" aria-labelledby="Resume">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div ng-include src="'views/resume.html'"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact -->
+    <section id="contact" class="even section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Contact</h2>
+                    <hr class="section-hr">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <form id="contact-form" class="text-left" role="form">
+                        <input type="hidden" name="source" value="Portfolio" />
+                        <div class="form-group">
+                            <label for="form-name">Name</label>
+                            <input type="text" class="form-control" placeholder="Name" id="form-name" name="name">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="form-email">Email</label>
+                            <input type="email" class="form-control" placeholder="Email" id="form-email" name="email">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="form-phone">Phone</label>
+                            <input type="tel" class="form-control" placeholder="Phone" id="form-phone" name="phone">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="form-message">Message</label>
+                            <textarea rows="1" class="form-control" placeholder="Message" id="form-message" name="message"></textarea>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label id="captcha-gen" for="form-captcha"></label>
+                            <input type="text" id="form-captcha" class="form-control" name="captcha" placeholder="">
+                        </div>
+                        <hr>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-lg">Send</button>
+                            <br>
+                            <div id="success"></div>
+                        </div>
+                </div>
+                </form>
+                <div id="min-email">x.a.reyes-ochoa@hotmail.com</div>
+            </div>
+        </div>
+        <div id="social-media">
+            <a href="https://www.linkedin.com/pub/xavier-alejandro-reyes-ochoa/82/184/b89"><img id="linkedin" src="img/social/linkedin.png"></a>&nbsp;
+            <a href="https://github.com/xrochoa"><img id="github" src="img/social/github.png"></a>&nbsp;
+            <a href="https://www.facebook.com/XavierAlejandroReyesOchoa"><img id="facebook" src="img/social/facebook.png"></a>
+        </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer id="footer">
+        <img ng-src="{{icon}}" ng-repeat="icon in icons">
+        <small><span>Developed and designed by&nbsp;</span><a href='mailto:x.a.reyes-ochoa@hotmail.com'>Xavi Ro</a>. &copy; <script type="text/javascript">
+            var d = new Date()
+            document.write(d.getFullYear())
+            </script><span class="min-footer">. All rights reserved.</span></small>
+    </footer>
+    <!-- jQuery first, then Bootstrap JS, then bootstrap form validator -->
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+    <!-- FormValidation plugin and the class supports validating Bootstrap form
+          <script src="bower_components/formvalidation-master/dist/js/formValidation.min.js"></script>
+          <script src="bower_components/formvalidation-master/dist/js/framework/bootstrap.min.js"></script>-->
+    <!-- Concatenated custom scripts -->
+    <script src="js/bundle.js"></script>
+</body>
+
+</html>

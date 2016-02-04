@@ -5,6 +5,10 @@
         <p>{{project.description}}</p>
         <hr>
         <img class="img-responsive" ng-src="img/portfolio/p{{project.number}}.png">
+        <div id="arrow-parent">
+            <img id="arrow-left" src="img/arrow-left.png" ng-click="previous()">
+            <img id="arrow-right" src="img/arrow-right.png" ng-click="next()">
+        </div>
         <hr>
         <p><b>Client:</b> {{project.client}}</p>
         <p><b>Key Technologies Used:</b> {{project.technology}}</p>
