@@ -15,10 +15,21 @@ window.angular.module('appFolio', [])
             $rootScope.project = $rootScope.projectData[index];
         };
 
-        var portfolioItems = ['riskvisualizer', 'fridgebinge', 'hdrgallery', 'defref', 'carcrash', 'various'];
+        var portfolioItems = [
+            'various',
+            'riskvisualizer',
+            'fridgebinge',
+            'hdrgallery',
+            'defref',
+            'carcrash',
+            'adeq',
+            'harmonystyles',
+            'disney'
+        ];
 
-        //previous button
-        $scope.previous = function() {
+
+        //next button
+        $scope.next = function() {
             var current = portfolioItems.indexOf($location.hash());
             if (current === 0) {
                 $scope.alterHash(portfolioItems[portfolioItems.length - 1]);
@@ -28,8 +39,8 @@ window.angular.module('appFolio', [])
             }
         }
 
-        //next button
-        $scope.next = function() {
+        //previous button
+        $scope.previous = function() {
             var current = portfolioItems.indexOf($location.hash());
             if (current === (portfolioItems.length - 1)) {
                 $scope.alterHash(portfolioItems[0]);
@@ -61,7 +72,7 @@ window.angular.module('appFolio', [])
             'title': 'Risk Visualizer',
             'description': 'Responsive web app to visualize health risk',
             'technology': 'HTML Canvas, AngularJS, Bootstrap',
-            'client': 'University of Washington Nurse Practitioner',
+            'client': 'Kindra C.',
             'code': 'riskvisualizer',
             'link': 'http://riskvisualizer.xaviro.com/',
             'number': 0
@@ -102,10 +113,34 @@ window.angular.module('appFolio', [])
             'title': 'Back to the 80\'s',
             'description': 'Eighties themed site',
             'technology': 'Bootstrap, Photoshop, Final Cut',
-            'client': 'Personal Project',
+            'client': 'Aaron H.',
             'code': 'various',
             'link': 'http://80s.xaviro.com/',
             'number': 5
+        }, {
+            'title': 'Harmony Styles',
+            'description': 'Stylist Business Website',
+            'technology': 'CSS3, Responsive design',
+            'client': 'Harmony L.',
+            'code': 'harmonystyles',
+            'link': 'http://www.harmonystyles.com',
+            'number': 6
+        }, {
+            'title': 'Arizona Department of Environmental Quality',
+            'description': 'ADEQ Interactive Microsite',
+            'technology': 'SVG, Illustrator, GSAP, Responsive Design',
+            'client': 'Killer Infographics',
+            'code': 'adeq',
+            'link': 'http://www.adeq.com',
+            'number': 7
+        }, {
+            'title': 'Nintendo Disney Art Academy',
+            'description': 'Website for Nintendo\'s new 3DS game',
+            'technology': 'CSS3, Photoshop, GSAP, slick.js',
+            'client': 'Enter the Studio',
+            'code': 'disney',
+            'link': 'http://artacademy.nintendo.com/disney/',
+            'number': 8
         }];
 
 
@@ -171,20 +206,6 @@ window.angular.module('appFolio', [])
                 'icon': 'photoshop',
                 'name': 'Photoshop & Gimp'
             }
-
-            /*,{
-                'icon': 'nginx',
-                'name': 'Nginx'
-            },  {
-                'icon': 'logic',
-                'name': 'Logic Pro'
-            }, {
-                'icon': 'finalcut',
-                'name': 'Final Cut Pro'
-            },{
-                'icon': 'docs',
-                'name': 'Google Docs'
-            }*/
 
         ];
 
@@ -254,7 +275,19 @@ window.angular.module('appFolio', [])
                         case 'various':
                             portfolioModal.modal();
                             $rootScope.changeProject(5);
-                            break; ///
+                            break;
+                        case 'harmonystyles':
+                            portfolioModal.modal();
+                            $rootScope.changeProject(6);
+                            break;
+                        case 'adeq':
+                            portfolioModal.modal();
+                            $rootScope.changeProject(7);
+                            break;
+                        case 'disney':
+                            portfolioModal.modal();
+                            $rootScope.changeProject(8);
+                            break;
                         case 'resume':
                             resumeModal.modal();
                     }
@@ -271,4 +304,8 @@ window.angular.module('appFolio', [])
 
 
             });
-    }]);
+    }]).filter('reverse', function() {
+        return function(items) {
+            return items.slice().reverse();
+        };
+    });

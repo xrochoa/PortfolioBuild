@@ -27,10 +27,6 @@
     }
 }
 
-#portfolio img, .portfolio-modal img {
-    box-shadow: 0 0 10px darken($xr-gray1, 12%);
-}
-
 #skillset img:hover {
     cursor: context-menu;
 }
@@ -64,4 +60,113 @@
 
 #github:hover {
     background-color: black;
+}
+
+
+/* PORTFOLIO IMAGES */
+
+.portfolio-image-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+    overflow: hidden;
+    box-shadow: 0 0 10px darken($xr-gray1, 12%);
+    img {
+        transition: transform ease .3s;
+    }
+    h4 {
+        display: block;
+        margin: 0;
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $xr-gray0;
+        opacity: 0;
+        transition: bottom ease .3s, opacity ease .3s;
+    }
+    .zoom-icon {
+        background-color: $mainLight;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        transition: opacity ease .3s;
+        opacity: 0;
+        span {
+            position: absolute;
+            left: 50%;
+            top: 0%;
+            transform: translate(-50%, -50%);
+            transition: top ease .3s;
+        }
+    }
+    &:hover {
+        .zoom-icon {
+            opacity: 0.75;
+            span {
+                top: 40%;
+            }
+        }
+        img {
+            transform: scale(1.25);
+        }
+        h4 {
+            bottom: 20%;
+            opacity: 1;
+        }
+    }
+}
+
+
+/* PORTFOLIO MODAL */
+
+#portfolio-image-wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px darken($xr-gray1, 12%);
+    &:hover {
+        #arrow-left,
+        #arrow-right {
+            width: 50px;
+        }
+    }
+}
+
+#arrow-left,
+#arrow-right {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    top: 0;
+    opacity: 0.5;
+    background: $xr-orange1;
+    transition: opacity .3s ease, width .3s ease;
+    img {
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        transform: translateY(-50%);
+    }
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
+#arrow-left {
+    left: 0;
+    img {
+        left: 3px;
+    }
+}
+
+#arrow-right {
+    right: 0;
+    img {
+        right: 3px;
+    }
 }

@@ -12,6 +12,7 @@
     .navbar-nav {
         > li > a {
             color: $mainClear;
+            transition: color .3s ease, background-color .3s ease;
             &:hover,
             &:focus {
                 color: $mainDark;

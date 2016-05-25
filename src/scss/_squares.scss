@@ -31,36 +31,6 @@ section {
     opacity: 1;
 }
 
-.project-1 {
-    @extend .project;
-    background-image: url('/img/p1.jpg');
-}
-
-.project-2 {
-    @extend .project;
-    background-image: url('/img/p2.jpg');
-}
-
-.project-3 {
-    @extend .project;
-    background-image: url('/img/p1.jpg');
-}
-
-.project-4 {
-    @extend .project;
-    background-image: url('/img/p2.jpg');
-}
-
-.project-5 {
-    @extend .project;
-    background-image: url('/img/p1.jpg');
-}
-
-.project-6 {
-    @extend .project;
-    background-image: url('/img/p2.jpg');
-}
-
 .glyphicon {
     color: $xr-gray0;
     position: relative;
