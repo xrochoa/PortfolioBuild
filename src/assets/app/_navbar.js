@@ -194,9 +194,10 @@ $(function() {
             var formData = $(e.target);
 
             $.ajax({
-                url: "http://fridgebinge.xaviro.com/contact",
+                url: "https://formspree.io/xareyesochoa@gmail.com",
                 type: "POST",
-                data: formData.serialize()
+                data: formData.serialize(),
+                dataType: "json"
             }).done(function(response) {
                 formData.formValidation('resetForm', true);
                 generateCaptcha();

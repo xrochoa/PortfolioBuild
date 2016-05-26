@@ -6,7 +6,6 @@ body {
     background: linear-gradient($mainClear, darken($mainClear, $amount));
 }
 
-#header,
 #footer {
     background: linear-gradient($mainDark, darken($mainDark, $amount));
 }
@@ -18,10 +17,6 @@ body {
 .even,
 #navbar {
     background: linear-gradient($mainLight, darken($mainLight, $amount));
-}
-
-#header {
-    padding: 10rem 0 5rem;
 }
 
 #footer {

@@ -2,10 +2,6 @@
     height: 100%;
 }
 
-#portfolio img {
-    width: 100%;
-}
-
 #skillset img,
 #experience img {
     width: 10rem;
@@ -72,7 +68,7 @@
     max-width: 400px;
     overflow: hidden;
     box-shadow: 0 0 10px darken($xr-gray1, 12%);
-    img {
+    & > img {
         transition: transform ease .3s;
     }
     h4 {
@@ -94,22 +90,23 @@
         top: 0;
         transition: opacity ease .3s;
         opacity: 0;
-        span {
+        & > img {
+            width: 50%;
             position: absolute;
             left: 50%;
             top: 0%;
-            transform: translate(-50%, -50%);
+            transform: translate(-40%, -50%);
             transition: top ease .3s;
         }
     }
     &:hover {
         .zoom-icon {
             opacity: 0.75;
-            span {
+            & > img {
                 top: 40%;
             }
         }
-        img {
+        & > img {
             transform: scale(1.25);
         }
         h4 {
@@ -169,4 +166,28 @@
     img {
         right: 3px;
     }
+}
+
+
+/* BACKGROUND VIDEO */
+
+//parent
+#header {
+    padding: 10rem 0 5rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient($mainDark, darken($mainDark, $amount));
+    .container-fluid {
+        position: relative;
+    }
+}
+
+#bg-video {
+    position: absolute;
+    opacity: 0.5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
 }

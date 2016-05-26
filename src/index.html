@@ -26,23 +26,21 @@
     <meta name="theme-color" content="#35bed9">
     <!-- Removes # in Angular routes -->
     <base href="/">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
     <!-- Google font -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <!-- Compiled and concatenated custom scss -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Angular JS and Modules -->
-    <script src="angular/angular.js"></script>
-    <!-- <script src="bower_components/angular-route/angular-route.js"></script> -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body class="text-center" data-spy="scroll" data-target="#collapsible" ng-app="appFolio" ng-controller="mainCtrl">
     <!-- Header-->
     <header id="header">
+        <video autoplay loop id="bg-video">
+            <source src="./assets/res/video/bg.webm" type="video/webm"/>
+        </video>
         <div class="container-fluid">
             <div class="row">
-                <img class="img-circle" id="header-logo" src="img/xl.png">
+                <img class="img-circle" id="header-logo" src="./assets/img/xl.png">
                 <div class="col-xs-12">
                     <h1 id="name">
             <span class="com">w</span><span class="com">w</span><span class="com">w</span><span class="com">.</span>
@@ -55,6 +53,7 @@
                     <p><span class="lead">Full-Stack JavaScript Developer</span></p>
                 </div>
             </div>
+        </div>
     </header>
     <!-- Navbar-->
     <div id="navParent">
@@ -70,7 +69,7 @@
                     </button>
                     <!-- Navbar Brand -->
                     <a class="navbar-brand" href="http://www.xaviro.com">
-                        <span><img class="img-circle" alt="xaviro.com" src="img/xs.png">
+                        <span><img class="img-circle" alt="xaviro.com" src="./assets/img/xs.png">
                   <span id="scrollFade"> Xavier Reyes Ochoa <span class="half-size">Developer</span></span>
                         </span>
                     </a>
@@ -101,9 +100,9 @@
                     <div class="row">
                         <div class="col-sm-4 col-xs-12 image-container" ng-repeat="item in projectData | reverse">
                             <a class="portfolio-image-link" ng-click="changeProject(item.number);alterHash(item.code);launchkModal1()">
-                                <img ng-src="img/portfolio/p{{item.number}}.png" class="img-responsive">
+                                <img ng-src="./assets/img/portfolio/p{{item.number}}.png" class="img-responsive">
                                 <div class="zoom-icon">
-                                    <span class="glyphicon glyphicon-zoom-in"></span>
+                                    <img src="./assets/img/zoom.svg" />
                                 </div>
                                 <h4 ng-bind="item.title"></h4>
                             </a>
@@ -131,7 +130,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-3 col-xs-4 image-container" ng-repeat="skill in skills">
-                    <img ng-src="img/skills/{{skill.icon}}.png" data-toggle="tooltip" data-placement="top" title="{{skill.name}}" alt="{{skill.name}}">
+                    <img ng-src="./assets/img/skills/{{skill.icon}}.png" data-toggle="tooltip" data-placement="top" title="{{skill.name}}" alt="{{skill.name}}">
                 </div>
             </div>
     </section>
@@ -147,10 +146,10 @@
             <div class="row">
                 <div class="col-sm-3 col-xs-6 image-container" data-toggle="tooltip" data-placement="top" title="More details on my resume" ng-repeat="job in jobs">
                     <!-- Experience section -->
-                    <img ng-src="img/experience/{{job.logo}}.png" ng-click="alterHash('resume');launchkModal2()">
+                    <img ng-src="./assets/img/experience/{{job.logo}}.png" ng-click="alterHash('resume');launchkModal2()">
                     <!-- data-toggle="modal" data-target=".resume-modal"-->
-                    <h5>{{job.name}}</h5>
-                    <p class="hidden-xs">{{job.desc}}</p>
+                    <h5 ng-bind="job.name"></h5>
+                    <p class="hidden-xs" ng-bind="job.desc"></p>
                 </div>
             </div>
     </section>
@@ -211,9 +210,9 @@
             </div>
         </div>
         <div id="social-media">
-            <a href="https://www.linkedin.com/pub/xavier-alejandro-reyes-ochoa/82/184/b89"><img id="linkedin" src="img/social/linkedin.png"></a>&nbsp;
-            <a href="https://github.com/xrochoa"><img id="github" src="img/social/github.png"></a>&nbsp;
-            <a href="https://www.facebook.com/XavierAlejandroReyesOchoa"><img id="facebook" src="img/social/facebook.png"></a>
+            <a href="https://www.linkedin.com/pub/xavier-alejandro-reyes-ochoa/82/184/b89"><img id="linkedin" src="./assets/img/social/linkedin.png"></a>&nbsp;
+            <a href="https://github.com/xrochoa"><img id="github" src="./assets/img/social/github.png"></a>&nbsp;
+            <a href="https://www.facebook.com/XavierAlejandroReyesOchoa"><img id="facebook" src="./assets/img/social/facebook.png"></a>
         </div>
         </div>
     </section>
@@ -225,14 +224,8 @@
             document.write(d.getFullYear())
             </script><span class="min-footer">. All rights reserved.</span></small>
     </footer>
-    <!-- jQuery first, then Bootstrap JS, then bootstrap form validator -->
-    <script src="jquery/dist/jquery.js"></script>
-    <script src="bootstrap/dist/js/bootstrap.js"></script>
-    <!-- FormValidation plugin and the class supports validating Bootstrap form
-          <script src="bower_components/formvalidation-master/dist/js/formValidation.min.js"></script>
-          <script src="bower_components/formvalidation-master/dist/js/framework/bootstrap.min.js"></script>-->
-    <!-- Concatenated custom scripts -->
-    <script src="js/bundle.js"></script>
+    <!-- scripts -->
+    <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
