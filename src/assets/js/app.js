@@ -43284,7 +43284,7 @@ $(function() {
         });
 });
 
-window.angular.module('appFolio', [])
+angular.module('appFolio', [])
     .controller('mainCtrl', ['$scope', '$location', '$rootScope', function($scope, $location, $rootScope) {
 
         //ROOT UTILITY FOR PORTFOLIO AND EXPERIENCE
@@ -43299,46 +43299,142 @@ window.angular.module('appFolio', [])
         //PORTFOLIO
         $rootScope.changeProject = function(index) {
             $rootScope.project = $rootScope.projectData[index];
+            $scope.currentIndex = index;
         };
 
-        var portfolioItems = [
-            'various',
-            'riskvisualizer',
-            'fridgebinge',
-            'hdrgallery',
-            'defref',
-            'carcrash',
-            'adeq',
-            'harmonystyles',
-            'disney'
-        ];
+        $rootScope.projectData = [{
+            'name': 'Nintendo Disney Art Academy',
+            'desc': 'Website for Nintendo\'s new 3DS game',
+            'tech': 'CSS3, JQuery, GSAP, slick.js, Photoshop',
+            'client': 'Enter the Studio',
+            'design': 'Enter the Studio',
+            'code': 'disney',
+            'link': 'http://artacademy.nintendo.com/disney/'
+        }, {
+            'name': 'Harmony Styles',
+            'desc': 'Stylist Business Website',
+            'tech': 'CSS3, JQuery, Responsive Design',
+            'client': 'Harmony L.',
+            'design': 'Tyler Warren',
+            'code': 'harmonystyles',
+            'link': 'http://harmonystyles-v3.surge.sh'
+        }, {
+            'name': 'Arizona Department of Environmental Quality',
+            'desc': 'ADEQ Interactive Microsite',
+            'tech': 'SVG, Illustrator, GSAP, Responsive Design, JQuery',
+            'client': 'Killer Infographics',
+            'design': 'Killer Infographics',
+            'code': 'adeq',
+            'link': 'http://kiadeq3.surge.sh'
+        }, {
+            'name': 'Fridge Binge',
+            'desc': 'Website for retro games startup',
+            'tech': 'AngularJS, Node.js, MongoDB, Express, Handlebars, Passport, Bcrypt, RESTful API',
+            'client': 'FridgeBingeGames',
+            'design': 'Xavier Reyes Ochoa',
+            'code': 'fridgebinge',
+            'link': 'http://www.fridgebinge.com'
+        }, {
+            'name': 'Demandware Shopper\'s Journey',
+            'desc': 'Shopping Experience Interactive Infographic',
+            'tech': 'D3.js, velocity.js, SVG, AJAX',
+            'client': 'Killer Infographics',
+            'design': 'Killer Infographics',
+            'code': 'demandware',
+            'link': 'http://www.demandware.com/new-shoppers-journey/graphic.php'
+        }, {
+            'name': 'Risk Visualizer',
+            'desc': 'Responsive web app to visualize health risk',
+            'tech': 'HTML Canvas, AngularJS, Bootstrap',
+            'client': 'Kindra C.',
+            'design': 'Xavier Reyes Ochoa',
+            'code': 'riskvisualizer',
+            'link': 'http://riskvisualizer.xaviro.com/'
+        }, {
+            'name': 'Class Appraisal',
+            'desc': 'Appraisal Data Interactive Infographic',
+            'tech': 'D3.js, topojson.js, ArcGIS, AJAX',
+            'client': 'Killer Infographics',
+            'design': 'Killer Infographics',
+            'code': 'classappraisal',
+            'link': 'https://www.classappraisal.com/interactive-dashboard'
+        }, {
+            'name': 'Developer\'s Reference',
+            'desc': 'Reference site for javascript developers',
+            'tech': 'Bootstrap, AngularJS, Sass, D3.js',
+            'client': 'Open Source Project',
+            'design': 'Xavier Reyes Ochoa',
+            'code': 'defref',
+            'link': 'http://devref.xaviro.com/'
+        }, {
+            'name': 'Car Crash',
+            'desc': 'Retro web game',
+            'tech': 'Phaser, Browserify, AJAX, RESTful API, Photoshop',
+            'client': 'FridgeBingeGames',
+            'design': 'Tyler Warren & Xavier Reyes Ochoa',
+            'code': 'carcrash',
+            'link': 'http://www.fridgebinge.com/carcrash'
+
+        }, {
+            'name': 'HDR Photography',
+            'desc': 'Web galery showcasing HDR photos of National Parks',
+            'tech': 'Bootstrap, AngularJS, Browserify',
+            'client': 'Personal Project',
+            'design': 'Xavier Reyes Ochoa',
+            'code': 'hdrgallery',
+            'link': 'http://photogallery.xaviro.com/'
+        }, {
+            'name': 'Back to the 80\'s',
+            'desc': 'Eighties themed site',
+            'tech': 'Bootstrap, Photoshop, Final Cut',
+            'client': 'Aaron H.',
+            'design': 'Xavier Reyes Ochoa',
+            'code': 'eighties',
+            'link': 'http://80s.xaviro.com/'
+        }, {
+            'name': 'Starbuck',
+            'desc': 'Starbucks Organization Campaign',
+            'tech': 'vivus.js, GSAP, SVG, Illustrator',
+            'client': 'Killer Infographics',
+            'design': 'Killer Infographics',
+            'code': 'starbucks',
+            'link': 'http://starbucksorgchartv2.surge.sh'
+        }];
+
+        //create array of code names
+        $rootScope.portfolioItems = [];
+
+        for (var i = 0; i < $rootScope.projectData.length; i++) {
+            $rootScope.portfolioItems.push($rootScope.projectData[i].code);
+
+        };
 
 
         //next button
         $scope.next = function() {
-            var current = portfolioItems.indexOf($location.hash());
+            var current = $rootScope.portfolioItems.indexOf($location.hash());
             if (current === 0) {
-                $scope.alterHash(portfolioItems[portfolioItems.length - 1]);
+                $scope.alterHash($rootScope.portfolioItems[$rootScope.portfolioItems.length - 1]);
             } else {
                 current--;
-                $scope.alterHash(portfolioItems[current]);
+                $scope.alterHash($rootScope.portfolioItems[current]);
             }
         }
 
         //previous button
         $scope.previous = function() {
-            var current = portfolioItems.indexOf($location.hash());
-            if (current === (portfolioItems.length - 1)) {
-                $scope.alterHash(portfolioItems[0]);
+            var current = $rootScope.portfolioItems.indexOf($location.hash());
+            if (current === ($rootScope.portfolioItems.length - 1)) {
+                $scope.alterHash($rootScope.portfolioItems[0]);
             } else {
                 current++;
-                $scope.alterHash(portfolioItems[current]);
+                $scope.alterHash($rootScope.portfolioItems[current]);
             }
         }
 
         //load portfolio when closing projects modal
         $('.portfolio-modal').on('hide.bs.modal', function() {
-            if (portfolioItems.indexOf($location.hash()) !== -1) {
+            if ($rootScope.portfolioItems.indexOf($location.hash()) !== -1) {
                 $scope.$apply(function() {
                     $scope.alterHash('portfolio');
                 })
@@ -43353,81 +43449,6 @@ window.angular.module('appFolio', [])
                 })
             }
         });
-
-        $rootScope.projectData = [{
-            'title': 'Risk Visualizer',
-            'description': 'Responsive web app to visualize health risk',
-            'technology': 'HTML Canvas, AngularJS, Bootstrap',
-            'client': 'Kindra C.',
-            'code': 'riskvisualizer',
-            'link': 'http://riskvisualizer.xaviro.com/',
-            'number': 0
-        }, {
-            'title': 'Fridge Binge',
-            'description': 'Website for retro games startup',
-            'technology': 'MEAN Stack (MongoDB, Express, AngularJS, Node.js), Handlebars, Passport (Local Authentication)',
-            'client': 'FridgeBingeGames',
-            'code': 'fridgebinge',
-            'link': 'http://fridgebinge.xaviro.com/',
-            'number': 1
-        }, {
-            'title': 'HDR Photography',
-            'description': 'Web galery showcasing HDR photos of National Parks',
-            'technology': 'Bootstrap, AngularJS, Browserify',
-            'client': 'Personal Project',
-            'code': 'hdrgallery',
-            'link': 'http://photogallery.xaviro.com/',
-            'number': 2
-        }, {
-            'title': 'Developer\'s Reference',
-            'description': 'Reference site for javascript developers',
-            'technology': 'Bootstrap, AngularJS, Sass',
-            'client': 'Personal Project',
-            'code': 'defref',
-            'link': 'http://devref.xaviro.com/',
-            'number': 3
-        }, {
-            'title': 'Car Crash',
-            'description': 'Retro javascript game',
-            'technology': 'Phaser, Browserify, Photoshop',
-            'client': 'FridgeBingeGames',
-            'code': 'carcrash',
-            'link': 'http://fridgebinge.xaviro.com/carcrash',
-            'number': 4
-
-        }, {
-            'title': 'Back to the 80\'s',
-            'description': 'Eighties themed site',
-            'technology': 'Bootstrap, Photoshop, Final Cut',
-            'client': 'Aaron H.',
-            'code': 'various',
-            'link': 'http://80s.xaviro.com/',
-            'number': 5
-        }, {
-            'title': 'Harmony Styles',
-            'description': 'Stylist Business Website',
-            'technology': 'CSS3, Responsive design',
-            'client': 'Harmony L.',
-            'code': 'harmonystyles',
-            'link': 'http://www.harmonystyles.com',
-            'number': 6
-        }, {
-            'title': 'Arizona Department of Environmental Quality',
-            'description': 'ADEQ Interactive Microsite',
-            'technology': 'SVG, Illustrator, GSAP, Responsive Design',
-            'client': 'Killer Infographics',
-            'code': 'adeq',
-            'link': 'http://www.adeq.com',
-            'number': 7
-        }, {
-            'title': 'Nintendo Disney Art Academy',
-            'description': 'Website for Nintendo\'s new 3DS game',
-            'technology': 'CSS3, Photoshop, GSAP, slick.js',
-            'client': 'Enter the Studio',
-            'code': 'disney',
-            'link': 'http://artacademy.nintendo.com/disney/',
-            'number': 8
-        }];
 
 
         //SKILLS
@@ -43529,53 +43550,22 @@ window.angular.module('appFolio', [])
 
                 $rootScope.launchkModal = function() {
 
-                    switch ($location.hash()) {
-                        case '':
-                        case 'portfolio':
-                        case 'skillset':
-                        case 'experience':
-                        case 'contact':
-                            portfolioModal.modal('hide');
-                            resumeModal.modal('hide');
-                            break;
-                        case 'riskvisualizer':
-                            portfolioModal.modal();
-                            $rootScope.changeProject(0);
-                            break;
-                        case 'fridgebinge':
-                            portfolioModal.modal();
-                            $rootScope.changeProject(1);
-                            break;
-                        case 'hdrgallery':
-                            portfolioModal.modal();
-                            $rootScope.changeProject(2);
-                            break;
-                        case 'defref':
-                            portfolioModal.modal();
-                            $rootScope.changeProject(3);
-                            break;
-                        case 'carcrash':
-                            portfolioModal.modal();
-                            $rootScope.changeProject(4);
-                            break;
-                        case 'various':
-                            portfolioModal.modal();
-                            $rootScope.changeProject(5);
-                            break;
-                        case 'harmonystyles':
-                            portfolioModal.modal();
-                            $rootScope.changeProject(6);
-                            break;
-                        case 'adeq':
-                            portfolioModal.modal();
-                            $rootScope.changeProject(7);
-                            break;
-                        case 'disney':
-                            portfolioModal.modal();
-                            $rootScope.changeProject(8);
-                            break;
-                        case 'resume':
-                            resumeModal.modal();
+                    var hideModalArray = ['', 'portfolio', 'skillset', 'experience', 'contact'];
+
+                    if (hideModalArray.indexOf($location.hash()) > -1) {
+
+                        portfolioModal.modal('hide');
+                        resumeModal.modal('hide');
+
+                    } else if ($rootScope.portfolioItems.indexOf($location.hash()) > -1) {
+
+                        portfolioModal.modal();
+                        $rootScope.changeProject($rootScope.portfolioItems.indexOf($location.hash()));
+
+                    } else if ($location.hash() === 'resume') {
+
+                        resumeModal.modal();
+
                     }
                 };
 
@@ -43590,8 +43580,4 @@ window.angular.module('appFolio', [])
 
 
             });
-    }]).filter('reverse', function() {
-        return function(items) {
-            return items.slice().reverse();
-        };
-    });
+    }]);

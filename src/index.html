@@ -98,13 +98,13 @@
             <article>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-sm-4 col-xs-12 image-container" ng-repeat="item in projectData | reverse">
-                            <a class="portfolio-image-link" ng-click="changeProject(item.number);alterHash(item.code);launchkModal1()">
-                                <img ng-src="./assets/img/portfolio/p{{item.number}}.png" class="img-responsive">
+                        <div class="col-sm-4 col-xs-12 image-container" ng-repeat="item in projectData track by $index">
+                            <a class="portfolio-image-link" ng-click="changeProject($index);alterHash(item.code);launchkModal1()">
+                                <img ng-src="./assets/img/portfolio/p{{$index}}.png" class="img-responsive">
                                 <div class="zoom-icon">
                                     <img src="./assets/img/zoom.svg" />
                                 </div>
-                                <h4 ng-bind="item.title"></h4>
+                                <h4 ng-bind="item.name"></h4>
                             </a>
                         </div>
                     </div>
