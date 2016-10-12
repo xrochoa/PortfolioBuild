@@ -25,3 +25,28 @@
     padding: 0.5rem 0;
     transition: padding .3s;
 }
+
+
+/*----------  SVG INTRO WITH HEADER LOGO ----------*/
+
+#svg-intro {
+    max-width: 300px;
+    overflow: visible;
+}
+
+
+/*----------  INITIALIZE ANIMATION  ----------*/
+
+#svg-intro,
+#svg-intro-circle,
+#svg-intro-computer,
+#svg-intro-shadow,
+#svg-intro-screen,
+#svg-intro-code,
+#bg-video {
+    opacity: 0;
+}
+
+.svg-intro-icon {
+    opacity: 0.1;
+}

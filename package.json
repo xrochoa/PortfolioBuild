@@ -14,10 +14,13 @@
   ],
   "author": "Xavier Reyes Ochoa",
   "license": "MIT",
-  "devDependencies": {},
-  "dependencies": {
+  "devDependencies": {
+    "browser-sync": "2.17.2",
     "gulp-clean-css": "2.0.8",
     "gulp-htmlmin": "2.0.0",
-    "gulp-include": "2.2.1"
+    "gulp-include": "2.2.1",
+    "gulp-inline": "0.1.2"
+  },
+  "dependencies": {
   }
 }
