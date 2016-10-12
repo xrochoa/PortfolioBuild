@@ -45,7 +45,9 @@ RESOURCES
 //Copy files from resources
 gulp.task('res', function() {
     return gulp.src('src/assets/res/**/*')
-        .pipe(gulp.dest('dist/assets/res'));
+        .pipe(gulp.dest('dist/assets/res'))
+        .pipe(browserSync.stream());
+
 });
 
 /*

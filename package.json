@@ -21,6 +21,5 @@
     "gulp-include": "2.2.1",
     "gulp-inline": "0.1.2"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

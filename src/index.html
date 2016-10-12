@@ -36,7 +36,7 @@
     <!-- Header-->
     <header id="header">
         <video autoplay loop id="bg-video">
-            <source src="./assets/res/video/bg.webm" type="video/webm" />
+            <source src="./assets/res/video/bg.mp4" type="video/mp4" />
         </video>
         <div class="container-fluid">
             <div class="row">
@@ -79,10 +79,10 @@
                 <!-- Collapsible -->
                 <div class="collapse navbar-collapse" id="collapsible">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a ng-href="#portfolio" target="_self">Portfolio<span class="sr-only">(current)</span></a></li>
-                        <li><a ng-href="#skillset" target="_self">Skill Set</a></li>
-                        <li><a ng-href="#experience" target="_self">Experience</a></li>
-                        <li><a ng-href="#contact" target="_self">Contact</a></li>
+                        <li class="active"><a id="btn-portfolio" ng-href="#portfolio" target="_self">Portfolio</a></li>
+                        <li><a id="btn-skillset" ng-href="#skillset" target="_self">Skill Set</a></li>
+                        <li><a id="btn-experience" ng-href="#experience" target="_self">Experience</a></li>
+                        <li><a id="btn-contact" ng-href="#contact" target="_self">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -132,7 +132,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-3 col-xs-4 image-container" ng-repeat="skill in skills">
-                    <img ng-src="./assets/img/skills/{{skill.icon}}.png" data-toggle="tooltip" data-placement="top" title="{{skill.name}}" alt="{{skill.name}}">
+                    <img ng-src="./assets/img/skills/{{skill.icon}}.svg" data-toggle="tooltip" data-placement="top" title="{{skill.name}}" alt="{{skill.name}}">
                 </div>
             </div>
     </section>

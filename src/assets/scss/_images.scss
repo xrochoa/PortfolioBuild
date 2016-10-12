@@ -90,7 +90,7 @@
         top: 0;
         transition: opacity ease .3s;
         opacity: 0;
-        & > img {
+        & > svg {
             width: 50%;
             position: absolute;
             left: 50%;
@@ -102,11 +102,11 @@
     &:hover {
         .zoom-icon {
             opacity: 0.75;
-            & > img {
+            & > svg {
                 top: 40%;
             }
         }
-        & > img {
+        & > svg {
             transform: scale(1.25);
         }
         h4 {

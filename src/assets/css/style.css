@@ -5964,7 +5964,7 @@ h2 {
     top: 0;
     transition: opacity ease .3s;
     opacity: 0; }
-    .portfolio-image-link .zoom-icon > img {
+    .portfolio-image-link .zoom-icon > svg {
       width: 50%;
       position: absolute;
       left: 50%;
@@ -5973,9 +5973,9 @@ h2 {
       transition: top ease .3s; }
   .portfolio-image-link:hover .zoom-icon {
     opacity: 0.75; }
-    .portfolio-image-link:hover .zoom-icon > img {
+    .portfolio-image-link:hover .zoom-icon > svg {
       top: 40%; }
-  .portfolio-image-link:hover > img {
+  .portfolio-image-link:hover > svg {
     transform: scale(1.25); }
   .portfolio-image-link:hover h4 {
     bottom: 20%;
