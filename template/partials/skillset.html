@@ -1,0 +1,16 @@
+<section id="skillset" class="even section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Skillset</h2>
+                <hr class="section-hr">
+            </div>
+        </div>
+        <div class="row">
+            {{#each skillset}}
+            <div class="col-sm-3 col-xs-4 image-container">
+                <img class="svg-skill" src="./assets/img/skills/{{this.icon}}.svg" data-toggle="tooltip" data-placement="top" title="{{this.name}}" alt="{{this.name}}">
+            </div>
+            {{/each}}
+        </div>
+</section>

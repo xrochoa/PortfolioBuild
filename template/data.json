@@ -1,0 +1,162 @@
+{
+    "portfolio": [{
+        "name": "Nintendo Disney Art Academy",
+        "desc": "Website for Nintendo's new 3DS game",
+        "tech": "CSS3, JQuery, GSAP, slick.js, Photoshop",
+        "client": "Enter the Studio",
+        "design": "Enter the Studio",
+        "code": "disney",
+        "link": "http://artacademy.nintendo.com/disney/"
+    }, {
+        "name": "Fridge Binge",
+        "desc": "Website for retro games startup",
+        "tech": "AngularJS, Node.js, MongoDB, Express, Handlebars, Passport, Bcrypt, RESTful API",
+        "client": "FridgeBingeGames",
+        "design": "Xavier Reyes Ochoa",
+        "code": "fridgebinge",
+        "link": "http://www.fridgebinge.com"
+    }, {
+        "name": "Arizona Department of Environmental Quality",
+        "desc": "ADEQ Interactive Microsite",
+        "tech": "SVG, Illustrator, GSAP, Responsive Design, JQuery",
+        "client": "Killer Infographics",
+        "design": "Killer Infographics",
+        "code": "adeq",
+        "link": "http://kiadeq3.surge.sh"
+    }, {
+        "name": "Class Appraisal",
+        "desc": "Appraisal Data Interactive Infographic",
+        "tech": "D3.js, topojson.js, ArcGIS, AJAX",
+        "client": "Killer Infographics",
+        "design": "Killer Infographics",
+        "code": "classappraisal",
+        "link": "https://www.classappraisal.com/interactive-dashboard"
+    }, {
+        "name": "Harmony Styles",
+        "desc": "Stylist Business Website",
+        "tech": "CSS3, JQuery, Responsive Design",
+        "client": "Harmony L.",
+        "design": "Tyler Warren",
+        "code": "harmonystyles",
+        "link": "http://harmonystyles-v3.surge.sh"
+    }, {
+        "name": "Car Crash",
+        "desc": "Retro web game",
+        "tech": "Phaser, Browserify, AJAX, RESTful API, Photoshop",
+        "client": "FridgeBingeGames",
+        "design": "Tyler Warren & Xavier Reyes Ochoa",
+        "code": "carcrash",
+        "link": "http://www.fridgebinge.com/carcrash"
+
+    }, {
+        "name": "Rosie",
+        "desc": "MIDI Generator Desktop App for macOS",
+        "tech": "Node.js, MIDI Specification, Electron",
+        "client": "Personal Project",
+        "design": "Xavier Reyes Ochoa",
+        "code": "rosie",
+        "link": "http://www.demandware.com/new-shoppers-journey/graphic.php"
+    }, {
+        "name": "Risk Visualizer",
+        "desc": "Responsive web app to visualize health risk",
+        "tech": "HTML Canvas, AngularJS, Bootstrap",
+        "client": "Kindra C.",
+        "design": "Xavier Reyes Ochoa",
+        "code": "riskvisualizer",
+        "link": "http://riskvisualizer.xaviro.com/"
+    }, {
+        "name": "HDR Photography",
+        "desc": "Web galery showcasing HDR photos of National Parks",
+        "tech": "Bootstrap, AngularJS, Browserify",
+        "client": "Personal Project",
+        "design": "Xavier Reyes Ochoa",
+        "code": "hdrgallery",
+        "link": "http://photogallery.xaviro.com/"
+    }],
+    "skillset": [{
+        "icon": "html",
+        "name": "HTML5"
+    }, {
+        "icon": "css",
+        "name": "CSS3"
+    }, {
+        "icon": "js",
+        "name": "JavaScript"
+    }, {
+        "icon": "jquery",
+        "name": "JQuery"
+    }, {
+        "icon": "angular",
+        "name": "AngularJS"
+    }, {
+        "icon": "bootstrap",
+        "name": "Bootstrap"
+    }, {
+        "icon": "sass",
+        "name": "Sass"
+    }, {
+        "icon": "git",
+        "name": "Git & GitHub"
+    }, {
+        "icon": "node",
+        "name": "Node.js"
+    }, {
+        "icon": "gulp",
+        "name": "Gulp"
+    }, {
+        "icon": "mongo",
+        "name": "MongoDB & Mongoose"
+    }, {
+        "icon": "npm",
+        "name": "npm & Bower"
+    }, {
+        "icon": "d3",
+        "name": "D3.js"
+    }, {
+        "icon": "gsap",
+        "name": "GSAP"
+    }, {
+        "icon": "jasmine",
+        "name": "Jasmine"
+    }, {
+        "icon": "svg",
+        "name": "SVG Graphics"
+    }, {
+        "icon": "firebase",
+        "name": "Firebase"
+    }, {
+        "icon": "bash",
+        "name": "Bash"
+    }, {
+        "icon": "phaser",
+        "name": "Phaser"
+    }, {
+        "icon": "react",
+        "name": "React"
+    }, {
+        "icon": "illustrator",
+        "name": "Illustrator"
+    }, {
+        "icon": "photoshop",
+        "name": "Photoshop"
+    }, {
+        "icon": "afterfx",
+        "name": "After Effects"
+    }, {
+        "icon": "premiere",
+        "name": "Premiere"
+    }],
+    "experience": [{
+        "name": "Nintendo Disney Art Academy at Enter the Studio",
+        "logo": "nintendo"
+    }, {
+        "name": "Google Maps Engine at Randstad",
+        "logo": "google"
+    }, {
+        "name": "Sesame Workshop at Killer Infographics",
+        "logo": "sesame"
+    }, {
+        "name": "Starbucks Training Widgets at Killer Infographics",
+        "logo": "starbucks"
+    }]
+}

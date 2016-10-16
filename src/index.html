@@ -7,23 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Xavier Reyes Ochoa - Developer</title>
     <!-- Favicon-->
-    <link rel="apple-touch-icon" sizes="57x57" href="res/favicon/apple-touch-icon-57x57.png?v=2">
-    <link rel="apple-touch-icon" sizes="60x60" href="res/favicon/apple-touch-icon-60x60.png?v=2">
-    <link rel="apple-touch-icon" sizes="72x72" href="res/favicon/apple-touch-icon-72x72.png?v=2">
-    <link rel="apple-touch-icon" sizes="76x76" href="res/favicon/apple-touch-icon-76x76.png?v=2">
-    <link rel="apple-touch-icon" sizes="114x114" href="res/favicon/apple-touch-icon-114x114.png?v=2">
-    <link rel="apple-touch-icon" sizes="120x120" href="res/favicon/apple-touch-icon-120x120.png?v=2">
-    <link rel="apple-touch-icon" sizes="144x144" href="res/favicon/apple-touch-icon-144x144.png?v=2">
-    <link rel="icon" type="image/png" href="res/favicon/favicon-32x32.png?v=2" sizes="32x32">
-    <link rel="icon" type="image/png" href="res/favicon/favicon-96x96.png?v=2" sizes="96x96">
-    <link rel="icon" type="image/png" href="res/favicon/favicon-16x16.png?v=2" sizes="16x16">
-    <link rel="manifest" href="res/favicon/manifest.json?v=2">
-    <link rel="mask-icon" href="res/favicon/safari-pinned-tab.svg?v=2" color="#5bbad5">
-    <link rel="shortcut icon" href="res/favicon/favicon.ico?v=2">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="res/favicon/mstile-144x144.png?v=2">
-    <meta name="msapplication-config" content="res/favicon/browserconfig.xml?v=2">
-    <meta name="theme-color" content="#35bed9">
+    {{> favicons}}
     <!-- Removes # in Angular routes -->
     <base href="/">
     <!-- Google font -->
@@ -41,7 +25,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="svg-wrapper">
-                    <object id="svg-intro" data="./assets/img/intro.svg" type="image/svg+xml"></object>
+                    <!-- only inlined svg -->
+                    {{> svg-intro }}
                 </div>
                 <div class="col-xs-12">
                     <h1 id="name">
@@ -89,80 +74,15 @@
         </nav>
     </div>
     <!-- Project section -->
-    <section id="portfolio" class="odd section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2>Portfolio</h2>
-                    <hr class="section-hr">
-                </div>
-            </div>
-            <article>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12 image-container" ng-repeat="item in projectData track by $index">
-                            <a class="portfolio-image-link" ng-click="changeProject($index);alterHash(item.code);launchkModal1()">
-                                <img ng-src="./assets/img/portfolio/p{{$index}}.png" class="img-responsive">
-                                <div class="zoom-icon">
-                                    <img src="./assets/img/zoom.svg" />
-                                </div>
-                                <h4 ng-bind="item.name"></h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-    </section>
-    <!-- Large modal -->
-    <div class="modal fade portfolio-modal" tabindex="-1" role="dialog" aria-labelledby="Portfolio Projects">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content color-cleared">
-                <div ng-include src="'views/portfolio.html'"></div>
-            </div>
-        </div>
-    </div>
+    {{> portfolio}}
+    <!-- Portfolio modal -->
+    {{> modal-portfolio}}
     <!-- Skillset section -->
-    <section id="skillset" class="even section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2>Skillset</h2>
-                    <hr class="section-hr">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-3 col-xs-4 image-container" ng-repeat="skill in skills">
-                    <img ng-src="./assets/img/skills/{{skill.icon}}.svg" data-toggle="tooltip" data-placement="top" title="{{skill.name}}" alt="{{skill.name}}">
-                </div>
-            </div>
-    </section>
+    {{> skillset}}
     <!-- Experience section -->
-    <section id="experience" class="odd section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2>Experience</h2>
-                    <hr class="section-hr">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-3 col-xs-6 image-container" data-toggle="tooltip" data-placement="top" title="More details on my resume" ng-repeat="job in jobs">
-                    <!-- Experience section -->
-                    <img ng-src="./assets/img/experience/{{job.logo}}.png" ng-click="alterHash('resume');launchkModal2()">
-                    <!-- data-toggle="modal" data-target=".resume-modal"-->
-                    <h5 ng-bind="job.name"></h5>
-                    <p class="hidden-xs" ng-bind="job.desc"></p>
-                </div>
-            </div>
-    </section>
-    <!-- Large modal -->
-    <div class="modal fade resume-modal" tabindex="-1" role="dialog" aria-labelledby="Resume">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div ng-include src="'views/resume.html'"></div>
-            </div>
-        </div>
-    </div>
+    {{> experience}}
+    <!-- Resume modal -->
+    {{> modal-resume}}
     <!-- Contact -->
     <section id="contact" class="even section">
         <div class="container-fluid">

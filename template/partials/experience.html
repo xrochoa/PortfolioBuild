@@ -1,0 +1,21 @@
+<section id="experience" class="odd section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Experience</h2>
+                <hr class="section-hr">
+            </div>
+        </div>
+        <div class="row">
+            <!-- ng-click="alterHash('resume');launchkModal2()" -->
+            {{#each experience}}
+            <div class="col-sm-3 col-xs-6 image-container btn-resume" data-toggle="tooltip" data-placement="top" title="More details on my resume">
+                <!-- Experience section -->
+                <img src="./assets/img/experience/{{this.logo}}.svg">
+                <!-- data-toggle="modal" data-target=".resume-modal"-->
+                <h5>{{this.name}}</h5>
+                <p class="hidden-xs">{{this.desc}}</p>
+            </div>
+            {{/each}}
+        </div>
+</section>

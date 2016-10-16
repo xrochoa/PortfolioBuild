@@ -1,34 +1,36 @@
 {
-    "name": "xaviro",
-    "version": "2.0.0",
-    "description": "My Portfolio",
-    "main": "server.js",
-    "moduleType": [],
-    "keywords": [
-        "angular",
-        "bootstrap",
-        "node",
-        "mongodb"
-    ],
-    "authors": [
-        "Xavier Reyes Ochoa"
-    ],
-    "license": "MIT",
-    "homepage": "www.xaviro.com",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "dependencies": {
-        "bootstrap": "3.3.6",
-        "angular": "1.5.5",
-        "jquery": "2.2.4",
-        "angular-route": "~1.4.7",
-        "bootstrap-validator": "~0.9.0",
-        "bootstrap-sass": "3.3.6",
-        "gsap": "1.19.0"
-    }
+  "name": "xaviro",
+  "version": "2.0.0",
+  "description": "My Portfolio",
+  "main": "server.js",
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "bootstrap",
+    "node",
+    "mongodb"
+  ],
+  "authors": [
+    "Xavier Reyes Ochoa"
+  ],
+  "license": "MIT",
+  "homepage": "www.xaviro.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.5",
+    "angular-route": "~1.4.7",
+    "bootstrap": "3.3.6",
+    "bootstrap-sass": "3.3.6",
+    "bootstrap-validator": "~0.9.0",
+    "gsap": "1.19.0",
+    "jquery": "2.2.4",
+    "vivus": "0.3.2",
+    "vjs-video": "^0.1.6"
+  }
 }

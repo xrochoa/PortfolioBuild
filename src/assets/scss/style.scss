@@ -1,5 +1,5 @@
-
-@import '../../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+@import '../../../node_modules/video.js/dist/video-js.min.css';
 //@import 'reset';
 //@import 'palette';
 @import 'navbar';
@@ -12,75 +12,5 @@
 @import 'modals';
 @import 'form';
 @import 'buttons';
-@import 'arrows';
 @import 'responsive';
-
-
-
-
-
-
-
-
-/*
-$firstColor: $xr-cyan2;
-$secondColor: $xr-orange1;
-$gradientDark: linear-gradient($xr-gray0, $xr-gray1);
-html, body, header, section, nav {
-    background-color: $secondColor;
-    //@extend .reset;
-          @extend .fullW;
-
-}
-
-nav, .row, .container, .col-xs-12 {
-      @extend .fullW;
-
-}
-
-
-
-.logo {
-  height: 30vw;
-  margin-top: 10rem;
-  margin-bottom: 10vw;
-
-}
-
-header .container {
-    background: linear-gradient($xr-gray2, $xr-gray3);
-    color: $firstColor;
-    padding-bottom: 100px;
-    width: 100%;
-}
-
-
-.name {
-    font-size: 8vw;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.lead {
-    font-size: 3.5vw;
-}
-
-hr {
-    max-width: 100%;
-    border: 0;
-    height: 1vh;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $firstColor, rgba(0, 0, 0, 0));
-}
-
-.skills {
-  //image size
-  width: 50%;
-}
-
-.skills-parent {
-  background-color: $xr-red0;
-}
-
-footer {
-    padding: 3%; 
-}*/
+@import 'video';

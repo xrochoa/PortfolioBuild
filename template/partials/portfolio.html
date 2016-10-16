@@ -1,0 +1,27 @@
+<section id="portfolio" class="odd section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Portfolio</h2>
+                <hr class="section-hr">
+            </div>
+        </div>
+        <article>
+            <div class="container-fluid">
+                <div class="row">
+                    {{#each portfolio}}
+                    <div class="col-sm-4 col-xs-12 image-container">
+                        <!-- ng-click="changeProject($index);alterHash(item.code);launchkModal1()" -->
+                        <a class="btn-portfolio">
+                            <img src="./assets/img/portfolio/{{this.code}}.png" class="img-responsive">
+                            <div class="zoom-icon">
+                                <img src="./assets/img/zoom.svg" />
+                            </div>
+                            <h4>{{this.name}}</h4>
+                        </a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </article>
+</section>

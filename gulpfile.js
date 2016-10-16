@@ -1,3 +1,6 @@
+// Installer
+//yarn add  --dev --exact gulp-autoprefixer gulp-clean-css gulp-jshint gulp-include gulp-uglify run-sequence browser-sync
+
 'use strict';
 
 // GULP
@@ -9,7 +12,8 @@ var imagemin = require('gulp-imagemin');
 
 //html
 var htmlmin = require('gulp-htmlmin'),
-    inline = require('gulp-inline');
+    handlebars = require('gulp-compile-handlebars');
+
 
 //css
 var sass = require('gulp-sass'),
@@ -28,6 +32,12 @@ var del = require('del'),
 //server
 var browserSync = require('browser-sync').create();
 
+
+// Allows module reloading require project name
+require.reload = function reload(path) {
+    delete require.cache[require.resolve(path)];
+    return require(path);
+};
 
 /*
 CLEAN
@@ -57,7 +67,7 @@ HTML
 //Minify html
 gulp.task('html', function() {
     return gulp.src('src/**/*.html')
-        .pipe(inline({ disabledTypes: ['img', 'css', 'js'] })) // Only inline SVG files
+        .pipe(handlebars(require.reload('./template/data.json'), { batch: ['./template/partials'] }))
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.stream());
@@ -142,7 +152,7 @@ gulp.task('watch', function() {
 
     gulp.watch('src/assets/res/**/*', ['res']);
     gulp.watch('src/assets/img/**/*', ['img', 'html']);
-    gulp.watch('src/**/*.html', ['html']);
+    gulp.watch(['src/**/*.html', 'template/**/*'], ['html']);
     gulp.watch('src/assets/scss/**/*.scss', ['css']);
     gulp.watch('src/assets/app/**/*.js', ['js']);
 

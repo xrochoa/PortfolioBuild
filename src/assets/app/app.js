@@ -1,15 +1,15 @@
 /*----------  LIBRARIES  ----------*/
 
-//=require ../../../bower_components/angular/angular.js
-//=require ../../../bower_components/jquery/dist/jquery.js
-//=require ../../../bower_components/bootstrap/dist/js/bootstrap.js
-//=require ../../../bower_components/gsap/src/minified/TweenMax.min.js
-//=require ../../../bower_components/gsap/src/minified/plugins/ScrollToPlugin.min.js
+//=require ../../../node_modules/jquery/dist/jquery.js
+//=require ../../../node_modules/bootstrap/dist/js/bootstrap.js
+//=require ../../../node_modules/gsap/src/minified/TweenMax.min.js
+//=require ../../../node_modules/gsap/src/minified/plugins/ScrollToPlugin.min.js
+
+//video.js alse requires a css file
+//=require ../../../node_modules/video.js/dist/video.min.js
 
 //=require ./lib/form1.js
 //=require ./lib/form2.js
-
-//=require ./_angular.js
 
 
 /*----------  CUSTOM JS  ----------*/
@@ -18,6 +18,14 @@
 
     'use strict';
 
+    //=require ./_header.js
     //=require ./_navbar.js
+    //=require ./_portfolio.js
+    //=require ./_experience.js
+    //=require ./_contact.js
+
+    /*----------  BOOTSTRAP TOOLTIP  ----------*/
+
+    $('[data-toggle="tooltip"]').tooltip();
 
 }());
