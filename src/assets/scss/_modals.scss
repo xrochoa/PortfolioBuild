@@ -1,4 +1,3 @@
-@import 'palette';
 .modal-content {
     background-color: #ff7866;
     padding: 0;
@@ -11,7 +10,7 @@
         padding: 0 3% 1%;
     }
     #resume-body {
-        background-color: $mainClear;
+        background-color: $white;
     }
     #resume-footer {
         padding: 2% 0 0;
@@ -33,8 +32,12 @@
         font-size: 8pt;
     }
     a {
-        color: $mainClear;
+        color: $blue;
         text-decoration: none;
+        transition: color .3s ease;
+        &:hover {
+            color: $orange;
+        }
     }
     h3,
     p {
@@ -43,7 +46,7 @@
     h3 {
         width: 100%;
         background-color: #36bed9;
-        color: $mainClear;
+        color: $white;
         font-weight: bold;
         padding: 1%;
     }
@@ -60,5 +63,5 @@
 }
 
 .color-cleared {
-    background-color: $mainClear;
+    background-color: $white;
 }

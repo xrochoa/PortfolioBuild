@@ -42,12 +42,12 @@ function animateIcons() {
     var tl = new TimelineMax();
     tl.fromTo($svgIntro, 2, { transformOrigin: '50% 50%', scale: 1 }, { scale: 1.1, ease: Sine.easeInOut })
         .to($svgIntro, 0.5, { scale: 1, ease: Bounce.easeOut, onComplete: animateLetters })
-        .to($icon1, 2, { x: '200px', opacity: 0.5, ease: Power4.easeOut }, '=-0.3')
-        .to($icon2, 1.5, { x: '100px', opacity: 0.7, ease: Power4.easeOut }, '=-2')
-        .to($icon3, 1, { x: '50px', opacity: 0.9, ease: Power4.easeOut }, '=-2')
-        .to($icon5, 2, { x: '-200px', opacity: 0.5, ease: Power4.easeOut }, '=-2')
-        .to($icon6, 1.5, { x: '-100px', opacity: 0.7, ease: Power4.easeOut }, '=-2')
-        .to($icon4, 1, { x: '-50px', opacity: 0.9, ease: Power4.easeOut }, '=-2')
+        .to($icon1, 2, { x: '400%', opacity: 0.5, ease: Power4.easeOut }, '=-0.3')
+        .to($icon2, 1.5, { x: '200%', opacity: 0.7, ease: Power4.easeOut }, '=-2')
+        .to($icon3, 1, { x: '100%', opacity: 0.9, ease: Power4.easeOut }, '=-2')
+        .to($icon5, 2, { x: '-400%', opacity: 0.5, ease: Power4.easeOut }, '=-2')
+        .to($icon6, 1.5, { x: '-200%', opacity: 0.7, ease: Power4.easeOut }, '=-2')
+        .to($icon4, 1, { x: '-100%', opacity: 0.9, ease: Power4.easeOut }, '=-2')
         .to($shadow, 3, { opacity: 1 });
 
 }

@@ -1,14 +1,13 @@
-@import 'palette';
 hr {
     height: 0.1rem;
     max-width: 100%;
     border: 0;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $mainLight, rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $blue, rgba(0, 0, 0, 0));
 }
 
 .even {
     hr {
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $mainClear, rgba(0, 0, 0, 0));
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $white, rgba(0, 0, 0, 0));
     }
 }
 
@@ -18,11 +17,11 @@ hr {
 }
 
 .tooltip-inner {
-    background-color: $mainDark;
-    color: $mainClear;
+    background-color: $black;
+    color: $white;
     font-size: 2rem;
 }
 
 .tooltip.top .tooltip-arrow {
-    border-top-color: $mainDark;
+    border-top-color: $black;
 }

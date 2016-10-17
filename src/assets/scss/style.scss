@@ -1,14 +1,15 @@
+//plugins
 @import '../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 @import '../../../node_modules/video.js/dist/video-js.min.css';
-//@import 'reset';
-//@import 'palette';
-@import 'navbar';
-//@import 'squares';
-@import 'layout';
+//common
+@import 'vars';
 @import 'fonts';
+//sections
+@import 'header';
+@import 'navbar';
+@import 'layout';
 @import 'images';
 @import 'tricks';
-@import 'nameAnimation';
 @import 'modals';
 @import 'form';
 @import 'buttons';

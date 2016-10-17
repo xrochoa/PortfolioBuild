@@ -1,8 +1,7 @@
-@import 'palette';
 .form-control,
 .form-control:focus {
     font-size: 2rem;
-    color: $mainDark;
+    color: $black;
     border: 0;
     background-color: transparent;
     box-shadow: none;
@@ -42,14 +41,14 @@ label {
 .has-error {
     .help-block,
     .glyphicon {
-        color: $xr-yellow1;
+        color: $yellow;
     }
 }
 
 .has-success {
     .help-block,
     .glyphicon {
-        color: $xr-green1;
+        color: $green;
     }
 }
 

@@ -19,12 +19,15 @@
         font-size: 1.5rem;
     }
     .half-size,
-    .min-footer  {
+    .min-footer {
         display: none;
     }
     .form-control,
     .form-control:focus {
         font-size: 1.5rem;
+    }
+    .btn-device {
+        width: 40px;
     }
 }
 
@@ -36,7 +39,7 @@
     h2 {
         font-size: 1.5rem;
     }
-    form{
+    form {
         display: none;
     }
     #min-email {

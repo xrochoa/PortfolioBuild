@@ -5815,6 +5815,90 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #4b4c4d; }
+
+.lead,
+.section {
+  letter-spacing: 0.3rem; }
+
+#header,
+#footer,
+.even {
+  color: #f5f9fa; }
+
+h2 {
+  text-transform: uppercase; }
+
+.half-size {
+  font-size: 1rem;
+  letter-spacing: 0.3rem; }
+
+#portfolio .glyphicon {
+  font-size: 10rem; }
+
+/* BACKGROUND VIDEO */
+#header {
+  padding: 10rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#323333, #2a2b2b); }
+  #header .container-fluid {
+    position: relative; }
+
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%; }
+
+.transparent {
+  color: transparent;
+  font-size: 0rem; }
+
+.xaviro,
+.com {
+  transition: font-size 0.5s ease, color 1.5s; }
+
+#scrollFade {
+  display: none; }
+
+#header-logo,
+.lead {
+  opacity: 0;
+  transition: all 2s ease; }
+
+.navbar-fixed-top {
+  padding: 0.5rem 0;
+  transition: padding .3s; }
+
+/*----------  SVG INTRO WITH HEADER LOGO ----------*/
+#svg-intro {
+  width: 300px;
+  max-width: 40%;
+  overflow: visible; }
+
+/*----------  INITIALIZE ANIMATION  ----------*/
+#svg-intro,
+#svg-intro-circle,
+#svg-intro-computer,
+#svg-intro-shadow,
+#svg-intro-screen,
+#svg-intro-code,
+#bg-video {
+  opacity: 0; }
+
+#svg-intro-icon1,
+#svg-intro-icon2,
+#svg-intro-icon3,
+#svg-intro-icon4,
+#svg-intro-icon5,
+#svg-intro-icon6 {
+  opacity: 0.1; }
+
 .navbar-custom {
   box-shadow: 0px 0px 10px 1px #4b4c4d; }
   .navbar-custom .navbar-brand {
@@ -5865,29 +5949,6 @@ body {
 
 .image-container {
   padding: 1rem; }
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: #4b4c4d; }
-
-.lead,
-.section {
-  letter-spacing: 0.3rem; }
-
-#header,
-#footer,
-.even {
-  color: #f5f9fa; }
-
-h2 {
-  text-transform: uppercase; }
-
-.half-size {
-  font-size: 1rem;
-  letter-spacing: 0.3rem; }
-
-#portfolio .glyphicon {
-  font-size: 10rem; }
 
 #navbar img {
   height: 100%; }
@@ -5987,19 +6048,23 @@ h2 {
   box-shadow: 0 0 10px #c0c6c9; }
   #portfolio-image-wrapper:hover #arrow-left,
   #portfolio-image-wrapper:hover #arrow-right {
-    width: 60px; }
+    width: 50px;
+    box-shadow: 0 0 0 5px #f5f9fa; }
 
 #arrow-left,
 #arrow-right {
   position: absolute;
-  height: 100px;
+  height: 80px;
   width: 0;
   overflow: hidden;
   top: 50%;
   transform: translateY(-50%);
   opacity: 0.5;
   background: #fe9141;
-  transition: opacity .3s ease, width .3s ease; }
+  box-shadow: 0 0 0 0 #f5f9fa;
+  transition: opacity .3s ease, width .3s ease, box-shadow .3s ease;
+  z-index: 10;
+  user-select: none; }
   #arrow-left img,
   #arrow-right img {
     position: absolute;
@@ -6015,30 +6080,13 @@ h2 {
   left: 0;
   border-radius: 0 30px 30px 0; }
   #arrow-left img {
-    left: 10px; }
+    left: 5px; }
 
 #arrow-right {
   right: 0;
   border-radius: 30px 0 0 30px; }
   #arrow-right img {
-    right: 10px; }
-
-/* BACKGROUND VIDEO */
-#header {
-  padding: 10rem 0 5rem;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(#323333, #2a2b2b); }
-  #header .container-fluid {
-    position: relative; }
-
-#bg-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%; }
+    right: 5px; }
 
 hr {
   height: 0.1rem;
@@ -6059,44 +6107,6 @@ hr {
 
 .tooltip.top .tooltip-arrow {
   border-top-color: #323333; }
-
-.transparent {
-  color: transparent;
-  font-size: 0rem; }
-
-.xaviro,
-.com {
-  transition: font-size 0.5s ease, color 1.5s; }
-
-#scrollFade {
-  display: none; }
-
-#header-logo,
-.lead {
-  opacity: 0;
-  transition: all 2s ease; }
-
-.navbar-fixed-top {
-  padding: 0.5rem 0;
-  transition: padding .3s; }
-
-/*----------  SVG INTRO WITH HEADER LOGO ----------*/
-#svg-intro {
-  max-width: 300px;
-  overflow: visible; }
-
-/*----------  INITIALIZE ANIMATION  ----------*/
-#svg-intro,
-#svg-intro-circle,
-#svg-intro-computer,
-#svg-intro-shadow,
-#svg-intro-screen,
-#svg-intro-code,
-#bg-video {
-  opacity: 0; }
-
-.svg-intro-icon {
-  opacity: 0.1; }
 
 .modal-content {
   background-color: #ff7866;
@@ -6124,8 +6134,11 @@ hr {
   .modal-subcontainer h6 {
     font-size: 8pt; }
   .modal-subcontainer a {
-    color: #f5f9fa;
-    text-decoration: none; }
+    color: #36bed9;
+    text-decoration: none;
+    transition: color .3s ease; }
+    .modal-subcontainer a:hover {
+      color: #fe9141; }
   .modal-subcontainer h3,
   .modal-subcontainer p {
     font-size: 11pt; }
@@ -6190,15 +6203,39 @@ label {
 textarea {
   resize: none; }
 
-#contact button, .modal-subcontainer a {
+/*----------  PLACEHOLDER  ----------*/
+#contact button:focus, .btn-close:focus, .btn-device:focus, #contact button:visited, .btn-close:visited, .btn-device:visited, #contact button:active, .btn-close:active, .btn-device:active, #contact button:hover, .btn-close:hover, .btn-device:hover {
+  outline: none !important; }
+
+.btn-close, .btn-device {
+  opacity: 0.75;
+  transform-origin: 50% 50%;
+  transition: opacity .3s ease, transform .3s ease; }
+  .btn-close:hover, .btn-device:hover {
+    opacity: 1;
+    transform: scale(1.2) rotate(360deg); }
+
+/*----------  STYLES  ----------*/
+#contact button {
   background-color: #fe9141;
   color: #f5f9fa;
   border: 1px solid #fe8228;
   margin: 3rem; }
-  #contact button:hover, .modal-subcontainer a:hover {
+  #contact button:hover {
     background-color: #fe8228;
     border: 1px solid #fe740e;
     color: #f5f9fa; }
+
+.btn-close {
+  width: 30px; }
+
+.btn-device {
+  width: 40px;
+  height: 50px;
+  background-color: #f5f9fa;
+  border-radius: 50%;
+  padding: 0;
+  margin: 10px; }
 
 #min-email {
   display: none;
@@ -6219,7 +6256,9 @@ textarea {
     display: none; }
   .form-control,
   .form-control:focus {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+  .btn-device {
+    width: 40px; } }
 
 @media (max-width: 270px) {
   #scrollFade {

@@ -1,7 +1,6 @@
-@import 'palette';
 body {
     font-family: 'Montserrat', sans-serif;
-    color: $xr-gray2;
+    color: $gray2;
 }
 
 .lead,
@@ -12,7 +11,7 @@ body {
 #header,
 #footer,
 .even {
-    color: $xr-gray0;
+    color: $white;
 }
 
 h2 {

@@ -1,11 +1,56 @@
-#contact button, .modal-subcontainer a {
-    background-color: $mainSecond;
-    color: $mainClear;
-    border: 1px solid darken($mainSecond, 5%);
+/*----------  PLACEHOLDER  ----------*/
+
+//resets some nasty behaviors
+%no-outline {
+    &:focus,
+    &:visited,
+    &:active,
+    &:hover {
+        outline: none !important;
+    }
+}
+
+%btn-hover {
+    opacity: 0.75;
+    transform-origin: 50% 50%; //just in case
+    transition: opacity .3s ease, transform .3s ease;
+    &:hover {
+        opacity: 1;
+        transform: scale(1.2) rotate(360deg);
+    }
+}
+
+
+/*----------  STYLES  ----------*/
+
+#contact button {
+    @extend %no-outline;
+    background-color: $orange;
+    color: $white;
+    border: 1px solid darken($orange, 5%);
     margin: 3rem;
     &:hover {
-        background-color: darken($mainSecond, 5%);
-        border: 1px solid darken($mainSecond, 10%);
-        color: $mainClear;
+        background-color: darken($orange, 5%);
+        border: 1px solid darken($orange, 10%);
+        color: $white;
     }
+}
+
+.btn-close {
+    @extend %no-outline;
+    width: 30px;
+    //animation
+    @extend %btn-hover;
+}
+
+.btn-device {
+    @extend %no-outline;
+    width: 40px;
+    height: 50px;
+    background-color: $white;
+    border-radius: 50%; //to improve style of shadow that appears when button is clicked
+    padding: 0; //overwrites button padding
+    margin: 10px;
+    //animation
+    @extend %btn-hover;
 }

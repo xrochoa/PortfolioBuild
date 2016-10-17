@@ -8,7 +8,7 @@ var scrollFade = $("#scrollFade");
 
 //navbar fixed   
 var nav = $('#navbar');
-var navParent = $('#navParent');
+var navParent = $('#nav-parent');
 var section = $('#portfolio');
 
 var navParentPosition, windowPosition, sectionPosition,

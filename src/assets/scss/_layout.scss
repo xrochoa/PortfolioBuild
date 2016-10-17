@@ -1,13 +1,12 @@
-@import 'palette';
 $amount: 3%;
 html,
 body {
     position: relative;
-    background: linear-gradient($mainClear, darken($mainClear, $amount));
+    background: linear-gradient($white, darken($white, $amount));
 }
 
 #footer {
-    background: linear-gradient($mainDark, darken($mainDark, $amount));
+    background: linear-gradient($black, darken($black, $amount));
 }
 
 #name {
@@ -16,7 +15,7 @@ body {
 
 .even,
 #navbar {
-    background: linear-gradient($mainLight, darken($mainLight, $amount));
+    background: linear-gradient($blue, darken($blue, $amount));
 }
 
 #footer {

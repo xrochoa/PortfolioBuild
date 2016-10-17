@@ -3,15 +3,15 @@
         <div class="modal-content color-cleared">
             <div class="modal-subcontainer">
                 <div class="text-center modal-head">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h1 id="portfolio-project-name"></h1>
-                    <p id="portfolio-project-desc"></p>
+                    <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+                        <img src="./assets/img/close.svg">
+                    </button>
+                    <h1 id="portfolio-project-title"></h1>
+                    <p id="portfolio-project-subtitle"></p>
                     <hr>
                     <div id="portfolio-image-wrapper">
                         <!-- video.js -->
                         <video id="portfolio-video" class="video-js vjs-default-skin" preload="none" controls width="800px" height="600px" data-setup='{ "aspectRatio":"800:600"}'>
-                            <source src="./assets/res/video/bg.mp4" type="video/mp4">
-                            <source src="really-cool-video.webm" type="video/webm">
                             <p class="vjs-no-js">
                                 To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
                             </p>
@@ -21,10 +21,19 @@
                         <div id="arrow-right"><img src="./assets/img/arrow-right.png"></div>
                     </div>
                     <hr>
-                    <p><b>Client:</b> <span id="portfolio-project-client"></span></p>
-                    <p><b>Designed by:</b> <span id="portfolio-project-design"></span></p>
-                    <p><b>Key Technologies Used:</b> <span id="portfolio-project-tech"></span></p>
-                    <a href="{{project.link}}" class="btn btn-lg" role="button">Go to Site</a>
+                    <button id="btn-video-desktop" class="btn btn-device" data-toggle="tooltip" data-placement="top" title="video">
+                        <img src="./assets/img/desktop.svg">
+                    </button>
+                    <button id="btn-video-ipad" class="btn btn-device" data-toggle="tooltip" data-placement="top" title="video">
+                        <img src="./assets/img/ipad.svg">
+                    </button>
+                    <button id="btn-video-mobile" class="btn btn-device" data-toggle="tooltip" data-placement="top" title="video">
+                        <img src="./assets/img/mobile.svg">
+                    </button>
+                    <button id="btn-web-link" class="btn btn-device" data-toggle="tooltip" data-placement="top" title="link">
+                        <img src="./assets/img/link-website.svg">
+                    </button>
+                    <p id="portfolio-project-description"></p>
                 </div>
             </div>
         </div>
