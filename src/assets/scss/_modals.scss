@@ -1,5 +1,5 @@
 .modal-content {
-    background-color: #ff7866;
+    background-color: $gray2;
     padding: 0;
 }
 
@@ -8,6 +8,9 @@
     font-family: 'Open Sans';
     .modal-head {
         padding: 0 3% 1%;
+    }
+    #resume-head {
+        color: $white;
     }
     #resume-body {
         background-color: $white;

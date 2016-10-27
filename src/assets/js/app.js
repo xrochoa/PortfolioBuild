@@ -20196,7 +20196,7 @@ if(c>31||d>12)return!1;for(var g=0,h=0;6>h;h++)g+=(7-h)*(parseInt(a.charAt(h),10
         'subtitle': 'Website for a retro games startup',
         'description': 'Fridge Binge was developed and designed as a gaming site using AngularJS, Node.js, MongoDB, Express, Handlebars, Passport, Bcrypt, and RESTful APIs. It\'s Auth sytem was later migrated to Angular 2 and Firebase as a future proof upgrade.',
         'code': 'fridgebinge',
-        'buttons': ['desktop', false, false, false]
+        'buttons': ['desktop', false, false, 'http://www.fridgebinge.com']
     }, {
         'title': 'Arizona Department of Environmental Quality',
         'subtitle': 'ADEQ Interactive Microsite',
@@ -20220,7 +20220,7 @@ if(c>31||d>12)return!1;for(var g=0,h=0;6>h;h++)g+=(7-h)*(parseInt(a.charAt(h),10
         'subtitle': 'Retro web game',
         'description': 'Car Crash is a web game that connects with <a href="http://fridgebinge.com/">FridgeBinge.com</a> through Restful API calls to create, update, delete (CRUD) user\'s data. It was designed with the help of Tyler Warren and developed using Phaser, Browserify, AJAX, RESTful APIs, and Photoshop.',
         'code': 'carcrash',
-        'buttons': ['desktop', false, false, false]
+        'buttons': [false, false, false, 'http://www.fridgebinge.com/games/carcrash']
     
     }, {
         'title': 'Rosie',

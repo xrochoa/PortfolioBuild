@@ -6109,7 +6109,7 @@ hr {
   border-top-color: #323333; }
 
 .modal-content {
-  background-color: #ff7866;
+  background-color: #4b4c4d;
   padding: 0; }
 
 .modal-subcontainer {
@@ -6117,6 +6117,8 @@ hr {
   font-family: 'Open Sans'; }
   .modal-subcontainer .modal-head {
     padding: 0 3% 1%; }
+  .modal-subcontainer #resume-head {
+    color: #f5f9fa; }
   .modal-subcontainer #resume-body {
     background-color: #f5f9fa; }
   .modal-subcontainer #resume-footer {

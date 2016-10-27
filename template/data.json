@@ -81,13 +81,16 @@
         "name": "CSS3"
     }, {
         "icon": "js",
-        "name": "JavaScript"
+        "name": "JavaScript (ES6)"
     }, {
         "icon": "jquery",
         "name": "JQuery"
     }, {
         "icon": "angular",
-        "name": "AngularJS"
+        "name": "Angular 1 & 2"
+    }, {
+        "icon": "typescript",
+        "name": "Typescript"
     }, {
         "icon": "bootstrap",
         "name": "Bootstrap"
@@ -96,19 +99,19 @@
         "name": "Sass"
     }, {
         "icon": "git",
-        "name": "Git & GitHub"
+        "name": "Git, GitHub, Source Tree, & Bitbucket"
     }, {
         "icon": "node",
-        "name": "Node.js"
+        "name": "Node.js & Express"
     }, {
         "icon": "gulp",
-        "name": "Gulp"
+        "name": "Gulp & Grunt"
     }, {
         "icon": "mongo",
         "name": "MongoDB & Mongoose"
     }, {
         "icon": "npm",
-        "name": "npm & Bower"
+        "name": "npm, Bower & yarn"
     }, {
         "icon": "d3",
         "name": "D3.js"
@@ -128,6 +131,9 @@
         "icon": "bash",
         "name": "Bash"
     }, {
+        "icon": "sublime",
+        "name": "Sublime & Package Control"
+    },{
         "icon": "phaser",
         "name": "Phaser"
     }, {
@@ -139,12 +145,6 @@
     }, {
         "icon": "photoshop",
         "name": "Photoshop"
-    }, {
-        "icon": "afterfx",
-        "name": "After Effects"
-    }, {
-        "icon": "premiere",
-        "name": "Premiere"
     }],
     "experience": [{
         "name": "Nintendo Disney Art Academy at Enter the Studio",
