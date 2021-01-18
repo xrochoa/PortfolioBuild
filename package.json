@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "bootstrap": "^3.4.1",
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap-sass": "^3.4.1",
     "gsap": "^3.6.0",
     "jquery": "^3.5.1",
     "video.js": "^5.11.7"
