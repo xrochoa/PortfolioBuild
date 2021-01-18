@@ -2,8 +2,9 @@
 
 //=require ../../../node_modules/jquery/dist/jquery.js
 //=require ../../../node_modules/bootstrap/dist/js/bootstrap.js
-//=require ../../../node_modules/gsap/src/minified/TweenMax.min.js
-//=require ../../../node_modules/gsap/src/minified/plugins/ScrollToPlugin.min.js
+//=require ../../../node_modules/gsap/dist/gsap.min.js
+//=require ../../../node_modules/gsap/dist/ScrollToPlugin.min.js
+//=require ../../../node_modules/gsap/dist/EasePack.min.js
 
 //video.js alse requires a css file
 //=require ../../../node_modules/video.js/dist/video.min.js
