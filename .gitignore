@@ -8,3 +8,4 @@ node_modules
 
 # Dist and temp folder
 dist
+src/assets/js
