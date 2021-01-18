@@ -26,8 +26,7 @@ var jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify');
 
 //utils
-var del = require('del'),
-    runSequence = require('run-sequence');
+var del = require('del');
 
 //server
 var browserSync = require('browser-sync').create();
@@ -44,7 +43,7 @@ CLEAN
 */
 
 //Clean dist folder before tasks
-gulp.task('clean', function() {
+gulp.task('clean', function () {
     return del(['dist/*']);
 });
 
@@ -53,14 +52,14 @@ RESOURCES
 */
 
 //Copy files from resources
-gulp.task('res', function() {
+gulp.task('res', function () {
     return gulp.src('src/assets/res/**/*')
         .pipe(gulp.dest('dist/assets/res'))
         .pipe(browserSync.stream());
 
 });
 
-gulp.task('fonts', function() {
+gulp.task('fonts', function () {
     return gulp.src('src/assets/fonts/**/*')
         .pipe(gulp.dest('dist/assets/fonts'))
         .pipe(browserSync.stream());
@@ -72,7 +71,7 @@ HTML
 */
 
 //Minify html
-gulp.task('html', function() {
+gulp.task('html', function () {
     return gulp.src('src/**/*.html')
         .pipe(handlebars(require.reload('./template/data.json'), { batch: ['./template/partials'] }))
         .pipe(htmlmin({ collapseWhitespace: true }))
@@ -86,7 +85,7 @@ IMAGES
 */
 
 //Minify png, jpg, gif and svg images
-gulp.task('img', function() {
+gulp.task('img', function () {
     return gulp.src('src/assets/img/**/*')
         .pipe(imagemin({
             progressive: true,
@@ -102,7 +101,7 @@ JAVASCRIPT
 */
 
 //Lint custom js
-gulp.task('js', function() {
+gulp.task('js', function () {
     return gulp.src('src/assets/app/**/app.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
@@ -119,7 +118,7 @@ CSS
 */
 
 //Compile scss to css and minify
-gulp.task('css', function() {
+gulp.task('css', function () {
     return gulp.src('src/assets/scss/**/style.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('src/assets/css'))
@@ -148,7 +147,7 @@ WATCH - DEFAULT
 */
 
 //Watches Files For Changes
-gulp.task('watch', function() {
+gulp.task('watch', function () {
 
     browserSync.init({
         server: {
@@ -157,16 +156,16 @@ gulp.task('watch', function() {
         open: false
     });
 
-    gulp.watch('src/assets/res/**/*', ['res', 'fonts']);
-    gulp.watch('src/assets/img/**/*', ['img', 'html']);
-    gulp.watch(['src/**/*.html', 'template/**/*'], ['html']);
-    gulp.watch('src/assets/scss/**/*.scss', ['css']);
-    gulp.watch('src/assets/app/**/*.js', ['js']);
+    gulp.watch('src/assets/res/**/*', gulp.series('res', 'fonts'));
+    gulp.watch('src/assets/img/**/*', gulp.series('img', 'html'));
+    gulp.watch(['src/**/*.html', 'template/**/*'], gulp.series('html'));
+    gulp.watch('src/assets/scss/**/*.scss', gulp.series('css'));
+    gulp.watch('src/assets/app/**/*.js', gulp.series('js'));
 
 });
 
 
 // Default Task
-gulp.task('default', function() {
-    runSequence('clean', 'res', 'fonts', 'img', 'html', 'css', 'js', 'watch');
-});
+gulp.task('default', gulp.series('clean', 'res', 'fonts', 'img', 'html', 'css', 'js', 'watch', function (done) {
+    console.log('done')
+}));

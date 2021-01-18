@@ -68,7 +68,7 @@ var $portfolioModal = $('#portfolio-modal'),
     $portfolioBtn = $('.btn-portfolio');
 
 //portfolio click
-$portfolioBtn.click(function() {
+$portfolioBtn.click(function () {
 
     var index = $portfolioBtn.index(this);
     currentProjectIndex = index;
@@ -87,16 +87,15 @@ $portfolioBtn.click(function() {
 var $arrowLeft = $('#arrow-left'),
     $arrowRight = $('#arrow-right');
 
-$arrowLeft.click(function() {
+$arrowLeft.click(function () {
 
     currentProjectIndex = (currentProjectIndex === 0) ? (portfolioData.length - 1) : (currentProjectIndex -= 1);
     changeProject(currentProjectIndex);
 
 
-
 });
 
-$arrowRight.click(function() {
+$arrowRight.click(function () {
 
     currentProjectIndex = (currentProjectIndex === portfolioData.length - 1) ? (currentProjectIndex = 0) : (currentProjectIndex += 1);
     changeProject(currentProjectIndex);
@@ -138,19 +137,19 @@ var $btnIpad = $('#btn-video-ipad');
 var $btnMobile = $('#btn-video-mobile');
 var $btnLink = $('#btn-web-link');
 
-$btnDesktop.click(function() {
+$btnDesktop.click(function () {
     changeVideo(currentProjectIndex, '-desktop');
 });
 
-$btnIpad.click(function() {
+$btnIpad.click(function () {
     changeVideo(currentProjectIndex, '-ipad');
 });
 
-$btnMobile.click(function() {
+$btnMobile.click(function () {
     changeVideo(currentProjectIndex, '-mobile');
 });
 
-$btnLink.click(function() {
+$btnLink.click(function () {
     window.open(portfolioData[currentProjectIndex].buttons[3]);
 });
 

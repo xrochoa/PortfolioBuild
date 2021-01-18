@@ -1,5 +1,6 @@
 # OS X folder meta
 .DS_Store
+.idea
 
 # Bower and npm packages
 bower_components
